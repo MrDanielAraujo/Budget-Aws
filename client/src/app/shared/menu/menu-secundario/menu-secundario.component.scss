@@ -1,0 +1,101 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/common";
+@import "../../../../assets/styles/width";
+@import "../../../../assets/styles/spacing";
+
+:host {
+  height: 100%;
+  gap: 5px;
+
+  @extend .d-flex;
+  @extend .justify-content-start;
+  @extend .align-items-center;
+  
+  & button {
+    height: 32px;
+  };
+
+  & .btn-gear {
+    height: 32px;
+    width: 32px;
+    border-radius: 5px;
+    border: solid 1px $white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    color: $blue-200;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $blue-200;
+      color: $white;
+    }
+  }
+
+  & .itenMenu {
+    @extend .d-flex;
+    @extend .justify-content-start;
+    @extend .align-items-center;
+    @extend .gap-2;
+
+    & > button {
+      & > span.title {
+        display: none;
+      }
+    }
+  }   
+}
+
+@media (min-width: 0px) and (max-width: 491.98px) {
+  
+  :host { 
+    
+    & > input[type="checkbox"]:not(:checked) + .itenMenu {
+      display: none !important;
+    }
+    
+    & .btn-gear {
+      display: flex;
+    }
+
+    & .itenMenu { 
+      background-color: $blue-200;
+      flex-direction: column;
+      position: absolute;
+      height: auto;
+      top: 48px;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      overflow-y: auto;
+      width: 150px;
+      gap: 0 !important;
+      z-index: 1;
+
+      & button {
+        width: 100% !important;
+        height: 45px;
+        min-height: 45px;
+        border-radius: 0;
+        border: 0;
+        background-color: $blue-200;
+        color: $white;
+        border-right: 5px solid $blue-200;
+        border-bottom: 1px solid $white;
+        
+        &:hover {
+          background-color: $blue-200;
+          color: $white;
+          border-right: 5px solid $blue-100;
+        }
+        
+        & > span.title {
+          display: flex;
+        }
+      }
+    }
+  }
+
+}

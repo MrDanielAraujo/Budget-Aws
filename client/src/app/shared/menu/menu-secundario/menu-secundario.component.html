@@ -1,0 +1,8 @@
+<button class="btn-gear" (click)="check.click()"><i class="fas fa-bars"></i></button>
+<input type="checkbox" class="d-none" #check/>
+<div class="itenMenu">
+  <button type="button" class="btn btn-primary-line" *ngFor="let item of menuSecundario" (click)="click(item.Id, item.Nome);check.click()">
+    <i class="fa-solid fa-{{item.Icone}}" ></i>
+    <span class="title ml-2">{{item.Nome}}</span>
+  </button>
+</div>

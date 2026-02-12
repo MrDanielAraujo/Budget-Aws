@@ -1,0 +1,53 @@
+<form class="form" [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onSubmit()" autocomplete="off" #formDir="ngForm">
+  <div class="card">
+    <div class="card-header">
+      <app-header-form icone="fas fa-table" title="Lançamentos Centro Custo"/>
+    </div>
+    <div class="card-main d-flex justify-content-center align-items-start p-3 ">
+      <div class="card-content gap-3">
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Informações</div>
+            <div class="row justify-content-between">
+              <app-input-form input="Id" label="Id" type="text" [control]="crud.form.getControl('Id')" class="d-none"/>
+              <app-combobox-form input="IdExercicio" label="Exercicio" [control]="crud.form.getControl('IdExercicio')" class="wp-45 wp-m-100" [error]="crud.checkInputError('IdExercicio')"  [options]="data?.Exercicios"/>
+              <app-combobox-form input="IdLancamentoTipo" label="Tipo" [control]="crud.form.getControl('IdLancamentoTipo')" class="wp-50 wp-m-100" [error]="crud.checkInputError('IdLancamentoTipo')"  [options]="data?.LancamentoTipos"/> 
+            </div>
+            <div class="row justify-content-between">
+              <app-combobox-form input="IdCentroCurso" label="Centro Custo" [control]="crud.form.getControl('IdCentroCusto')" class="wp-45 wp-m-100" [error]="crud.checkInputError('IdCentroCusto')"  [options]="data?.CentroCustos"/>
+              <app-combobox-form input="IdContaContabil" label="Conta Contabil" [control]="crud.form.getControl('IdContaContabil')" class="wp-50 wp-m-100" [error]="crud.checkInputError('IdContaContabil')"  [options]="data?.ContaContabeis"/> 
+            </div>
+          </div>
+        </div>
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Valores</div>
+            <div class="row justify-content-between">
+              <app-input-form input="ValoresJaneiro" label="Janeiro" type="text" [control]="crud.form.getControl('ValoresJaneiro')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresFevereiro" label="Fevereiro" type="text" [control]="crud.form.getControl('ValoresFevereiro')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresMarco" label="Março" type="text" [control]="crud.form.getControl('ValoresMarco')" class="wp-30 wp-m-100" classInput="input-primary" />
+            </div>
+            <div class="row justify-content-between">
+              <app-input-form input="ValoresAbril" label="Abril" type="text" [control]="crud.form.getControl('ValoresAbril')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresMaio" label="Maio" type="text" [control]="crud.form.getControl('ValoresMaio')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresJunho" label="Junho" type="text" [control]="crud.form.getControl('ValoresJunho')" class="wp-30 wp-m-100" classInput="input-primary" />
+            </div>
+            <div class="row justify-content-between">
+              <app-input-form input="ValoresJulho" label="Julho" type="text" [control]="crud.form.getControl('ValoresJulho')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresAgosto" label="Agosto" type="text" [control]="crud.form.getControl('ValoresAgosto')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresSetembro" label="Setembro" type="text" [control]="crud.form.getControl('ValoresSetembro')" class="wp-30 wp-m-100" classInput="input-primary" />
+            </div>
+            <div class="row justify-content-between">
+              <app-input-form input="ValoresOutubro" label="Outubro" type="text" [control]="crud.form.getControl('ValoresOutubro')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresNovembro" label="Novembro" type="text" [control]="crud.form.getControl('ValoresNovembro')" class="wp-30 wp-m-100" classInput="input-primary" />
+              <app-input-form input="ValoresDezembro" label="Dezembro" type="text" [control]="crud.form.getControl('ValoresDezembro')" class="wp-30 wp-m-100" classInput="input-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <app-footer-form [showFooterBtn]="crud.footerBtn" (eventVoltar)="crud.onBack()" (eventEditar)="crud.onEdit()" (eventCancelar)="crud.onCancel()" (eventDeletar)="crud.onDelete()"/>
+    </div>
+  </div>
+</form>

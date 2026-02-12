@@ -1,0 +1,165 @@
+@import "../../../../src/assets/styles/colors";
+@import "../../../../src/assets/styles/fonts";
+@import "../../../../src/assets/styles/common";
+@import "../../../../src/assets/styles/spacing";
+
+.block-sistem-access {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  display: block;
+  background-color: $black;
+  z-index: 101;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 102;
+  margin: 0;
+
+  
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    width: 90%;
+    max-width: 750px;
+    height: 90%;
+    position: relative;
+
+    & > div.filtro {
+      background-color: $white;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-top: 15px;
+      border: solid 1px $blue-200;
+      border-radius: 25px;
+      align-items: center !important;
+      & > i {
+        color: $gray-300;
+
+        &:last-child {
+          cursor: pointer;
+        }
+      }
+
+      & > input[type="text"]{
+        border: 0;
+      }
+    }
+
+    & ul {
+      list-style-type: none;
+      padding: 10px;
+      margin: 0;
+      margin-top: 10px;
+      background-color: $white;
+      border-radius: 5px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      white-space: normal;
+      display: flex;
+      position: absolute;
+      bottom: 10px;
+      top: 70px;
+      left: 10px;
+      right: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+
+      & li {
+        font-family: 'inter', 'Times New Roman', Times, serif;
+        font-size: 12px;
+        height: 100px;
+        width: 80px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        padding: 5px;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $blue-150;
+        }
+
+        & i {
+          font-size: 25px;
+        }
+      }
+    }
+  
+    & div {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    
+      & label {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: 'inter', 'Times New Roman', Times, serif;
+        font-weight:bolder;
+        & i {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+      }
+    
+      & span {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.alert-primary {
+  & > div {
+    border: solid 1px $blue-200;
+    background-color: $blue-180;
+  
+    & ul {
+      & li {
+        color: $blue-200;
+        background-color: $gray-400;
+      }
+    }
+  
+    & div {
+      & label {
+        color: $blue-200;
+      }
+    
+      & span {
+        color: $blue-170;
+      }
+    }
+  }
+}
+

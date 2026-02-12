@@ -1,0 +1,94 @@
+@import "../../../../src/assets/styles/colors";
+@import "../../../../src/assets/styles/fonts";
+@import "../../../../src/assets/styles/common";
+
+
+.btn-gear {
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  border: solid 1px $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  color: $blue-200;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $blue-200;
+    color: $white;
+  }
+
+}
+
+nav {
+  height: 100%;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+}
+.img-logo {
+  height: 100%;
+  width: 110px;
+  background-image: url("https://pdqazfsh.blob.core.windows.net/materialdesign/Logo-12-RGB.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 50%;
+  background-size: 85px auto;
+}
+.system-name {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  color: $blue-200;
+}
+
+.current-user-pic {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: solid 1px $gray-400;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.current-user-letters {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: solid 1px $blue-200;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  color: $white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  background-color: $blue-200;
+}
+
+.card-user-info {
+  display: none;
+  position: fixed;
+  top: 48px;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: $white;
+  border: solid 1px $gray-400;
+  z-index: 100;
+}
+
+.user-info-show {
+  display: block;
+}

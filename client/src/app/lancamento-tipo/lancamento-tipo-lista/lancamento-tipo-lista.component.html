@@ -1,0 +1,70 @@
+<div class="card">
+  <div class="card-header">
+    <app-header-table icone="fa-layer-group" title="Tipo Lançamento" ></app-header-table>
+  </div>
+  <div class="card-main">
+    <form [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onPagination($event, 1)">
+      <table class="table table-striped mobile-optimised">
+        <thead>
+          <tr>
+            <th class=" mw-7 xw-7 w-7 cursor-pointer freezeColumn" >
+              <div>
+                <span>Ação</span>
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </div>
+            </th>
+            <th class=" mw-15 xw-15 w-15 cursor-pointer freezeColumn" >
+              <div>
+                <span>Código</span>
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </div>
+            </th>
+            <th class=" mw-50 cursor-pointer" (click)="nome.click()">
+              <div>
+                <span>Nome</span>
+                <i class="fa-solid fa-arrow-down-up-across-line" data-icon="nome" (click)="crud.onSetSortField('nome', $event)" #nome></i>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th class="freezeColumn">
+              <div class="d-flex justify-content-center">
+                <i class="fa-solid far fa-check-circle m-0 " [ngClass]="crud.onCheckedAll(idsList?.length) ? 'itemChecked' : 'itemNotChecked'" (click)="crud.onDeleteAll(idsList)"></i>
+              </div>
+            </th>
+            <th>
+              <div>
+                <input type="text" formControlName="Codigo" autocomplete="off">
+                <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+              </div>
+            </th>
+            <th>
+              <div>
+                <input type="text" formControlName="Nome" autocomplete="off">
+                <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-hover" *ngFor="let model of dataList">
+            <td data-th="" class="justify-content-center freezeColumn p-0 mobile-d-none">
+              <div>
+                <i class="fa-regular far fa-check-circle" [ngClass]="crud.onChecked(model.Id) ? 'itemChecked' : 'itemNotChecked'" (click)="crud.onCheckboxChanged(model.Id, $event)"></i>
+              </div>
+            </td>
+            <td data-th="Código:&nbsp;" class="td-hover" (click)="crud.onSelectItem($event, model.Id)"><i class="fa-solid fa-layer-group pr-2"></i>{{model.Codigo}}</td>
+            <td data-th="Nome:&nbsp;" class="td-hover" (click)="crud.onSelectItem($event, model.Id)">{{model.Nome}}</td>
+            <td data-th="" class="mobileShow mobile-justify-content-end">
+              <i class="fa-regular far fa-check-circle" [ngClass]="crud.onChecked(model.Id) ? 'itemChecked' : 'itemNotChecked'" (click)="crud.onCheckboxChanged(model.Id, $event)"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" class="d-none">Submit</button>
+    </form>
+  </div>
+  <div class="card-footer">
+    <app-footer-table [table]="crud.table" (btn)="crud.onBtn($event)"></app-footer-table>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+@import "colors";
+@import "fonts";
+
+.badge {
+  display: inline-block;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  position: relative;
+}
+
+.badge-pill {
+  border-radius: 50px !important;
+}
+
+.badge-primary { 
+  background-color: $blue-200;
+  color: $white;
+}
+
+.badge-danger { 
+  background-color: $red-200;
+  color: $white;
+}
+
+.badge-success { 
+  background-color: $green-200;
+  color: $white;
+}
+
+.badge-secondary {
+  background-color: $gray-500;
+  color: $white;
+}
+
+.badge-warning { 
+  background-color: $yellow-200;
+  color: $white;
+}

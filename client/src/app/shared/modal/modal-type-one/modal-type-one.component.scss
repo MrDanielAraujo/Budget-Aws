@@ -1,0 +1,91 @@
+@import "../../../../../src/assets/styles/colors";
+@import "../../../../../src/assets/styles/fonts";
+@import "../../../../../src/assets/styles/common";
+@import "../../../../../src/assets/styles/spacing";
+@import "../../../../../src/assets/styles/width";
+@import "../../../../../src/assets/styles/table";
+
+.block-sistem-access {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  display: block;
+  background-color: $black;
+  z-index: 101;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 102;
+  margin: 0;
+
+  
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    width: 90%;
+    max-width: 750px;
+    height: 90%;
+    position: relative;
+
+    & form {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 10px;
+      background-color: $white;
+      border-radius: 5px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      white-space: normal;
+      position: absolute;
+      bottom: 10px;
+      top: 30px;
+      left: 10px;
+      right: 10px;
+    }
+  }
+}
+
+.alert-primary {
+  & > div {
+    border: solid 1px $blue-200;
+    background-color: $blue-180;
+  
+    & ul {
+      & li {
+        color: $blue-200;
+        background-color: $gray-400;
+      }
+    }
+  
+    & div {
+      & label {
+        color: $blue-200;
+      }
+    
+      & span {
+        color: $blue-170;
+      }
+    }
+  }
+}

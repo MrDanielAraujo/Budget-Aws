@@ -1,0 +1,105 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/common";
+@import "../../../../assets/styles/width";
+@import "../../../../assets/styles/spacing";
+
+
+:host {
+
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .align-items-center;
+  @extend .wp-100; 
+  height: 100%;
+
+  &.btnCreateHide .btnCreateHide,
+  &.btnImportHide .btnImportHide,
+  &.btnDeleteHide .btnDeleteHide,
+  &.btnExportExcelHide .btnExportExcelHide {
+    @extend .d-none;
+  }
+
+  &.btnResetShow .btnResetShow {
+    display: flex !important;
+  }
+
+}
+
+.btnResetHide {
+  @extend .d-none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.pagination{
+  list-style-type: none;
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  & .page-item:first-child::after {
+    content: "<";
+  }
+
+  & .page-item:last-child::after {
+    content: ">";
+  }
+
+  & .page-item {
+    border-bottom: solid  1px $blue-200;
+    border-top: solid 1px $blue-200;
+    border-right: solid 1px $blue-200;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    background-color: $white;
+
+    &.active {
+      background-color: $blue-180 !important;
+      color: $blue-200 !important;
+    }
+
+    &:hover {
+      background-color: $blue-200;
+      color: $white;
+    }
+
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:first-child {
+      border-left: solid 1px $blue-200;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+  }
+}
+
+@media (min-width: 0px) and (max-width: 491.98px) {
+
+  .infoPages {
+    display: none;
+  }
+
+  .btn {
+    &:hover {
+      background-color: $white !important;
+      color: $blue-200;
+    }
+  }
+
+  .pagination{
+    & .page-item {
+      &:hover {
+        background-color: $white;
+        color: $blue-200;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div class="text-primary d-flex align-items-center justify-content-start">
+  <ul class="pagination" *ngIf="table.Pages.length >= 1">
+    <li class="page-item" (click)="onPagination($event, 1)"></li>
+    <li class="page-item" *ngFor="let page of table.Pages" [ngClass]="{'active': page == table.PageNow}" (click)="onPagination($event, page)">
+        {{ page }}
+    </li>
+    <li class="page-item" (click)="onPagination($event, table.PageCount)"></li>
+  </ul>
+  <div class="infoPages">
+    <span class="ml-2" *ngIf="table.Pages.length >= 1">{{table.PageNow}} de {{table.PageCount}} paginas </span> ( {{table.RegCount}} itens )
+  </div>
+</div>
+<div class="text-primary d-flex align-items-center justify-content-end">
+  <button class="btn btn-primary-line ml-2 btnCreateHide" (click)="onCreate($event)" title="Novo registro"><i class="fa-solid fas fa-plus"></i></button>
+  <button class="btn btn-primary-line ml-2 btnImportHide" (click)="import.click()" title="Carregar carga"><i class="fa-solid fas fa-file-import"></i></button>
+  <button class="btn btn-danger-line ml-2 btnDeleteHide" (click)="onDelete($event)" title="Apagar registros"><i class="fa-solid fas fa-trash-alt"></i></button>
+  <button class="btn btn-success-line ml-2 btnExportExcelHide" (click)="onExcel($event)" title="Baixar Excel"><i class="fa-solid fas far fa-file-excel"></i></button>
+  <button class="btn btn-warning-line ml-2 btnResetHide btnResetShow" (click)="onReset($event)" title="Reset"><i class="fa-solid fas far fas fa-retweet"></i></button>
+  <input type="file" name="import" id="import" (change)="onImport($event)" #import/>
+</div>

@@ -1,0 +1,333 @@
+@import "colors";
+
+.itemChecked {
+  color: $blue-100;
+  cursor: pointer;
+}
+
+.itemNotChecked {
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    color: $blue-100;
+  }
+}
+
+td.freezeColumn {
+  position: sticky;
+  left:0;
+  top: auto;
+  z-index: 2 !important;
+  & div {
+    height: 31px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue-200 !important;
+    border-bottom: solid 1px white;
+    border-right: solid 1px $gray-400 !important;
+  }
+}
+
+th.freezeColumn {
+  position: sticky;
+  left:0;
+  top: auto;
+  z-index: 4 !important;
+  background-color: $blue-200 !important;
+}
+
+.table {
+  margin: 0 !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  width: 100%;
+
+  //Linha do titulo da Grid.
+  & tr:nth-of-type(1) > th {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    padding: 0!important;
+    margin: 0!important;
+    z-index: 3;
+    background-color: $blue-200;
+    color: $white;
+    
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 28px;
+      border: solid 1px $gray-400;
+      border-left: 0;
+    
+      & > span {
+        font-family: 'inter', 'Times New Roman', Times, serif;
+        margin-left: 5px;
+        font-size: 12px;
+      }
+  
+      & > i {
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  //Linha de campo de filtro.
+  & tr:nth-of-type(2) > th {
+    overflow: hidden;
+    position: sticky;
+    top: 30px;
+    padding: 0!important;
+    margin: 0!important;
+    z-index: 3;
+    background-color: $white;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 28px;
+      border: solid 1px $gray-400;
+      border-left: 0 !important;
+      border-top: 0 !important;
+  
+      & > input , & > select {
+        font-family: 'inter', 'Times New Roman', Times, serif;
+        width: 100%;
+        border: 0;
+        border-bottom: dotted 1px $red;
+        height: 21px;
+        margin-left: 5px;
+        height: 22px;
+        padding: 0;
+      }
+    
+      & > i {
+        margin-right: 5px;
+        color: $gray-450;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+td {
+  height: 30px !important;
+  max-height: 30px !important;
+  padding-left: 5px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-size: 13px;
+
+  & > div.div-no-border {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border-left: 0;
+  }
+
+  & > div.div-border {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border: solid 1px $gray-400;
+    border-left: 0;
+  }
+
+  &.td-Help {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    & > span {
+      font-size: 12px;
+    }
+  }
+}
+
+
+td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    border-right: 0px solid grey !important;
+  }
+
+}
+
+.tr-line-botton:not(:last-child) {
+  border-bottom: solid 1px $gray-200 !important;
+}
+
+tr.hover:hover {
+  background-color: $gray-150;
+
+  @media (min-width: 0px) and (max-width: 491.98px) {
+    background-color: transparent !important;
+  }
+}
+
+tr:hover .td-hover {
+  background-color: $blue-180 !important;
+
+  @media (min-width: 0px) and (max-width: 491.98px) {
+    background-color: transparent !important;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: $gray-150;
+  cursor: pointer !important;
+  &:hover {
+    //background-color: $primary !important;
+    //color: $white !important;
+  }
+
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: $white;
+  cursor: pointer !important;
+
+  @media (min-width: 0px) and (max-width: 491.98px) {
+    // background-color: $gray-150;
+  }
+
+  &:hover {
+    // background-color: $primary !important;
+    //color: $white !important;
+  }
+}
+
+td.mobileShow {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 491.98px) {
+
+  table {
+
+    &.mobile-optimised {
+      word-wrap:break-word;
+    }
+
+    &.mobile-optimised thead {
+      display:none
+    }
+
+    &.mobile-optimised td {
+      display: flex;
+      width:auto;
+      // height: 20px !important;
+      clear:both;
+      padding: 0 !important;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+      box-sizing:border-box;
+      align-items: center;
+      font-size: 14px !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-right: 0 !important;
+      white-space: normal;
+
+      &::before {
+        content: attr(data-th);
+      }
+
+    }
+
+    &.mobile-optimised tbody {
+      display:block;
+    }
+
+    &.mobile-optimised tr {
+      display:flex;
+      flex-wrap: wrap;
+      border-radius: 5px;
+      background-color: $gray-150;
+      margin: 15px;
+      padding: 10px;
+      box-shadow: 0 6px 10px -4px $box-shadow;
+      border-left: 5px solid $blue-200;
+    }
+
+    & tr td.subTd {
+      height: auto !important;
+      max-width: none!important;
+    }
+
+    & tr.mobile-bg-primary {
+      background-color: $blue-bg;
+
+      &:hover {
+        //background-color: $blue-bg !important;
+        background-color: transparent !important;
+      }
+    }
+
+    & tr.mobile-bg-danger {
+      background-color: $red-bg;
+
+      &:hover {
+        //background-color: $red-bg !important;
+        background-color: transparent !important;
+      }
+    }
+
+    & tr.mobile-bg-warning {
+      background-color: $yellow-bg;
+
+      &:hover {
+        //background-color: $yellow-bg !important;
+        background-color: transparent !important;
+      }
+    }
+
+    & tr.mobile-bg-success {
+      background-color: $green-bg;
+
+      &:hover {
+        //background-color: $green-bg !important;
+        background-color: transparent !important;
+      }
+    }
+
+    & tr.subTr {
+      border: 0;
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  td.mobileShow {
+    display: flex;
+  }
+
+  .itemNotChecked {
+    color: $blue-200 !important;
+    
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+}

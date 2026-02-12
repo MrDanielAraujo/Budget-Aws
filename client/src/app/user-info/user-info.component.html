@@ -1,0 +1,23 @@
+<div class="flex justify-content-space-between align-items-center card-header">
+  <span>ICL</span>
+  <button (click)="onSignOut()">Sign out</button>
+</div>
+<div class="flex align-items-center card-main">
+  <div>
+    <img *ngIf="userService.currentUserPic()" [src]="userService.currentUserPic()" class="currentUserPic"/>
+    <div *ngIf="!userService.currentUserPic()" class="currentUserLetters">
+      {{ userService.currentUser()?.givenName?.charAt(0)?.toUpperCase() }}
+      {{ userService.currentUser()?.surname?.charAt(0)?.toUpperCase() }}
+    </div>
+  </div>
+  <div>
+    <p><b>{{ userService.currentUser()?.givenName }} {{ userService.currentUser()?.surname }} | ICL</b></p>
+    <p>{{ userService.currentUser()?.mail }}</p>
+  </div>
+</div>
+<div class="flex align-items-center card-footer">
+  <div>
+    <span class="fas fa-user-plus"></span>
+  </div>
+  <span>Sign in with a different account</span>
+</div>

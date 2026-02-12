@@ -1,0 +1,33 @@
+@import "colors";
+@import "fonts";
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+
+  & i {
+    font-size: 23px;
+    margin-right: 5px;
+  }
+  
+  & span {
+    cursor: pointer;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+  }
+
+}
+
+.input-tab-item {
+  display: none;
+}
+
+.tab:has(> input.input-tab-item:not(:checked)) { 
+  opacity: 0.3;
+}
+
+.tab-enable {
+  opacity: 0.3;
+}

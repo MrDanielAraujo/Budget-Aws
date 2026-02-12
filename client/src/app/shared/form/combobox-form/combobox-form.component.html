@@ -1,0 +1,7 @@
+ <select name="{{ input }}" id="{{ input }}" [formControl]="control" class="pl-0 wp-100 input {{classInput}}">
+  <option value="" ></option>
+  <option *ngFor="let reg of options" value="{{reg.Id}}" >{{reg.Descricao}}</option>
+</select>
+<label for="{{ input }}">{{label}}</label>
+
+

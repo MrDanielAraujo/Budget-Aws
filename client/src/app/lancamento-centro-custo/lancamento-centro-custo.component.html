@@ -1,0 +1,495 @@
+<app-modal-type-one></app-modal-type-one>
+<div class="card">
+  <div class="card-header">
+    <app-header-form icone="fas fa-table" title="Despesas Administrativas, Comerciais e Fabris:"/>
+  </div>
+  <div class="card-main">
+    <div class="d-flex justify-content-between p-2">
+      <div class="d-flex align-items-center font-icl font-size-icl-4">Centro Custo: - Nome centro custo - status</div>
+      <app-menu-secundario class="gap-2" (eventClick)="onGetComboInformacoes($event)"/>
+    </div>
+    <div class="content-list">
+      <form [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onPagination($event, 1)">
+        <table class="table table-striped mobile-optimised">
+          <thead>
+            <tr>
+              <th class=" mw-20 xw-20 w-20 cursor-pointer freezeColumn" >
+                <div></div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer freezeColumn l-20" (click)="codigo.click()">
+                <div>
+                  <span>Código</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="codigo" (click)="crud.onSetSortField('codigo', $event)" #codigo></i>
+                </div>
+              </th>
+              <th class=" mw-40 xw-40 w-40 cursor-pointer freezeColumn l-33" (click)="nome.click()">
+                <div>
+                  <span>Conta Contábil</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="nome" (click)="crud.onSetSortField('nome', $event)" #nome></i>
+                </div>
+              </th>
+              <th class=" mw-12 xw-12 w-12 cursor-pointer freezeColumn l-73" (click)="tipo.click()">
+                <div>
+                  <span>Tipo</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="tipo" (click)="crud.onSetSortField('tipo', $event)" #tipo></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="janeiro.click()">
+                <div>
+                  <span>janeiro</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="janeiro" (click)="crud.onSetSortField('janeiro', $event)" #janeiro></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="fevereiro.click()">
+                <div>
+                  <span>fevereiro</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="fevereiro" (click)="crud.onSetSortField('fevereiro', $event)" #fevereiro></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="marco.click()">
+                <div>
+                  <span>março</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="marco" (click)="crud.onSetSortField('marco', $event)" #marco></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="abril.click()">
+                <div>
+                  <span>abril</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="abril" (click)="crud.onSetSortField('abril', $event)" #abril></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="maio.click()">
+                <div>
+                  <span>maio</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="maio" (click)="crud.onSetSortField('maio', $event)" #maio></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="junho.click()">
+                <div>
+                  <span>junho</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="junho" (click)="crud.onSetSortField('junho', $event)" #junho></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="julho.click()">
+                <div>
+                  <span>julho</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="julho" (click)="crud.onSetSortField('julho', $event)" #julho></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="agosto.click()">
+                <div>
+                  <span>agosto</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="agosto" (click)="crud.onSetSortField('agosto', $event)" #agosto></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="setembro.click()">
+                <div>
+                  <span>setembro</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="setembro" (click)="crud.onSetSortField('setembro', $event)" #setembro></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="outubro.click()">
+                <div>
+                  <span>outubro</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="outubro" (click)="crud.onSetSortField('outubro', $event)" #outubro></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="novembro.click()">
+                <div>
+                  <span>novembro</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="novembro" (click)="crud.onSetSortField('novembro', $event)" #novembro></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="dezembro.click()">
+                <div>
+                  <span>dezembro</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="dezembro" (click)="crud.onSetSortField('dezembro', $event)" #dezembro></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="total.click()">
+                <div>
+                  <span>total</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="total" (click)="crud.onSetSortField('total', $event)" #total></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="media.click()">
+                <div>
+                  <span>media</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="media" (click)="crud.onSetSortField('media', $event)" #media></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="orcadoReal.click()">
+                <div>
+                  <span>Orçado Real</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="orcadoReal" (click)="crud.onSetSortField('orcadoReal', $event)" #orcadoReal></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="orcadoRealPorcento.click()">
+                <div>
+                  <span>Orçado Real %</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="orcadoRealPorcento" (click)="crud.onSetSortField('orcadoRealPorcento', $event)" #orcadoRealPorcento></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="orcadoForecast.click()">
+                <div>
+                  <span>Orçado Forecast</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="orcadoForecast" (click)="crud.onSetSortField('orcadoForecast', $event)" #orcadoForecast></i>
+                </div>
+              </th>
+              <th class=" mw-13 xw-13 w-13 cursor-pointer" (click)="orcadoForecastPorcento.click()">
+                <div>
+                  <span>Orçado Forecast %</span>
+                  <i class="fa-solid fa-arrow-down-up-across-line" data-icon="orcadoForecastPorcento" (click)="crud.onSetSortField('orcadoForecastPorcento', $event)" #orcadoForecastPorcento></i>
+                </div>
+              </th>
+            </tr>
+            <tr *ngIf="totalShow">
+              <th colspan="3" class="freezeColumn">
+                <div class="d-flex justify-content-center"></div>
+              </th>
+              <th class="freezeColumn l-73">
+                <div></div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Janeiro" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Fevereiro" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Marco" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Abril" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Maio" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Junho" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Julho" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Agosto" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Setembro" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Outubro" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Novembro" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <input type="text" formControlName="Dezembro" autocomplete="off">
+                  <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+                </div>
+              </th>
+              <th>
+                <div></div>
+              </th>
+              <th>
+                <div></div>
+              </th>
+              <th>
+                <div></div>
+              </th>
+              <th>
+                <div></div>
+              </th>
+              <th>
+                <div></div>
+              </th>
+              <th>
+                <div></div>
+              </th>
+            </tr>
+            <tr *ngIf="totalShow && LancamentoCentroCusto!.Total.length >= 1">
+              <th colspan="3" class="freezeColumn">
+                <div class="text-light">Total</div>
+              </th>
+              <th class="freezeColumn l-73" >
+                <div class="text-light justify-content-start"><i class="fa-solid fa-layer-group pr-2"></i>Orçado</div>
+              </th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresJaneiro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresFevereiro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresMarco}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresAbril}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresMaio}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresJunho}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresJulho}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresAgosto}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresSetembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresOutubro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresNovembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].ValoresDezembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].Total}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].Media}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].OrcadoReal}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].OrcadoRealPorcento}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].OrcadoForecast}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[0].OrcadoForecastPorcento}}</div></th>
+            </tr>
+            <tr *ngIf="totalShow && LancamentoCentroCusto!.Total.length >= 2">
+              <th colspan="3" class="freezeColumn">
+                <div class="text-light">Total</div>
+              </th>
+              <th class="freezeColumn l-73" >
+                <div class="text-light justify-content-start"><i class="fa-solid fa-layer-group pr-2"></i>Forecast</div>
+              </th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresJaneiro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresFevereiro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresMarco}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresAbril}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresMaio}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresJunho}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresJulho}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresAgosto}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresSetembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresOutubro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresNovembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].ValoresDezembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].Total}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].Media}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].OrcadoReal}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].OrcadoRealPorcento}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].OrcadoForecast}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[1].OrcadoForecastPorcento}}</div></th>
+            </tr>
+            <tr *ngIf="totalShow && LancamentoCentroCusto!.Total.length >= 3">
+              <th colspan="3" class="freezeColumn">
+                <div class="text-light">Total Ano Anterior</div>
+              </th>
+              <th class="freezeColumn l-73" >
+                <div class="text-light justify-content-start"><i class="fa-solid fa-layer-group pr-2"></i>Real</div>
+              </th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresJaneiro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresFevereiro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresMarco}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresAbril}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresMaio}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresJunho}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresJulho}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresAgosto}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresSetembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresOutubro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresNovembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].ValoresDezembro}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].Total}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].Media}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].OrcadoReal}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].OrcadoRealPorcento}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].OrcadoForecast}}</div></th>
+              <th><div>{{LancamentoCentroCusto!.Total[2].OrcadoForecastPorcento}}</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr *ngIf="contaFixasShow">
+              <td colspan="4" class="freezeColumn p-0 mobile-d-none">
+                <div class="d-flex align-items-center justify-content-start text-light pl-2 border-right-zero">Contas Fixas<i class="fa-solid fa-square-plus pl-2" (click)="contaFixaExpand()"></i></div>
+              </td>
+              <td colspan="18">
+                <div class="primary-black"></div>
+              </td>
+            </tr>
+            <ng-container *ngIf="contaFixasShow">
+              <tr *ngFor="let model of LancamentoCentroCusto?.Fixas">
+                <ng-container *ngIf="lancamentoRowShow(model.CodigoContaContabil, model.DigitoContaContabil, model.LancamentoTipo)">
+                  <td data-th="" class="justify-content-center freezeColumn p-0 mobile-d-none">
+                    <div class="justify-content-center gap-2">
+                      <span class="badge badge-danger" *ngIf=" model.DigitoContaContabil <= 97">Limite</span>
+                      <span class="badge badge-danger" *ngIf=" model.DigitoContaContabil <= 97">Justificativa</span>
+                      <span class="badge badge-warning" *ngIf="model.HelpContaContabil != '' && model.DigitoContaContabil <= 97" (click)="tooltip([ 'Conta Contábil: '+ model.NomeContaContabil,model.HelpContaContabil])">
+                        Ajuda
+                      </span>
+                    </div>
+                  </td>
+                  <td data-th="Codigo:&nbsp;" class="freezeColumn l-20">
+                    <div class="text-light" (click)="setLancamentoShow(model.CodigoContaContabil)">
+                      <i class="fa-solid fa-square-plus pr-2" *ngIf="model.DigitoContaContabil == 0"></i>
+                      <span *ngIf="model.DigitoContaContabil == 0">{{model.CodigoContaContabil}}</span>
+                    </div>
+                  </td>
+                  <td data-th="Nome:&nbsp;" class="freezeColumn l-33" >
+                    <div class="text-light">
+                      <ng-container *ngIf="model.DigitoContaContabil <= 97">
+                        <i class="fa-solid fa-coins pr-2"></i>
+                        {{model.NomeContaContabil}}
+                      </ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Tipo:&nbsp;" class="freezeColumn l-73" ><div class="text-light"><i class="fa-solid fa-layer-group pr-2"></i>{{model.LancamentoTipo}}</div></td>
+
+                  <td data-th="Janeiro:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresJaneiro" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresJaneiro}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Fevereiro&nbsp;">
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresFevereiro" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresFevereiro}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Março:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresMarco" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresMarco}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Abril:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresAbril" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresAbril}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Maio:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresMaio" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresMaio}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Junho:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresJunho" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresJunho}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Julho:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresJulho" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresJulho}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Agosto:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresAgosto" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresAgosto}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Setembro:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresSetembro" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresSetembro}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Outubro:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresOutubro" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresOutubro}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Novembro:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresNovembro" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresNovembro}}</ng-container>
+                    </div>
+                  </td>
+                  <td data-th="Dezembro:&nbsp;" >
+                    <div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">
+                      <input type="text" autocomplete="off" [value]="model.ValoresDezembro" *ngIf="model.LancamentoTipo.toLocaleLowerCase() == 'orçado'">
+                      <ng-container *ngIf="model.LancamentoTipo.toLocaleLowerCase() != 'orçado'">{{model.ValoresDezembro}}</ng-container>
+                    </div>
+                  </td>
+              
+                  <td data-th="Total:&nbsp;" ><div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">{{model.Total}}</div></td>
+                  <td data-th="Média:&nbsp;" ><div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">{{model.Media}}</div></td>
+                  <td data-th="Orçado Real:&nbsp;" ><div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">{{model.OrcadoReal}}</div></td>
+                  <td data-th="Orçado Real %:&nbsp;" ><div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">{{model.OrcadoRealPorcento}}</div></td>
+                  <td data-th="Orçado Forecast:&nbsp;" ><div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">{{model.OrcadoForecast}}</div></td>
+                  <td data-th="Orçado Forecast %:&nbsp;" ><div class="pl-2 pr-2 {{getClassByLancamentoTipo(model.LancamentoTipo)}} text-primary">{{model.OrcadoForecastPorcento}}</div></td>
+                </ng-container>
+              </tr>
+            </ng-container>
+            <tr *ngIf="contaVariaveisShow">
+              <td colspan="4" class="freezeColumn p-0 mobile-d-none">
+                <div class="d-flex align-items-center justify-content-start text-light pl-2 border-right-zero">Contas Variáveis<i class="fa-solid fa-square-plus pl-2" (click)="contaVariaveisExpand()"></i></div>
+              </td>
+              <td colspan="18">
+                <div class="primary-black"></div>
+              </td>
+            </tr>
+            <ng-container *ngIf="contaVariaveisShow">
+              <tr class="tr-hover" *ngFor="let model of LancamentoCentroCusto?.Variaveis">
+                <td data-th="" class="justify-content-center freezeColumn p-0 mobile-d-none">
+                  <div class="justify-content-center gap-2">
+                    <span class="badge badge-danger">Limite</span>
+                    <span class="badge badge-danger">Justificativa</span>
+                    <span class="badge badge-warning">Ajuda</span>
+                  </div>
+                </td>
+                <td data-th="Codigo:&nbsp;" class="freezeColumn l-20"><div class="text-light"><i class="fa-solid fa-square-plus pr-2"></i>{{model.CodigoContaContabil}}</div></td>
+                <td data-th="Nome:&nbsp;" class="freezeColumn l-33" ><div class="text-light"><i class="fa-solid fa-coins pr-2"></i>{{model.NomeContaContabil}}</div></td>
+                <td data-th="Tipo:&nbsp;" class="freezeColumn l-73" ><div class="text-light"><i class="fa-solid fa-layer-group pr-2"></i>{{model.LancamentoTipo}}</div></td>
+
+                <td data-th="Janeiro:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresJaneiro}}</div></td>
+                <td data-th="Fevereiro&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresFevereiro}}</div></td>
+                <td data-th="Março:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresMarco}}</div></td>
+                <td data-th="Abril:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresAbril}}</div></td>
+                <td data-th="Maio:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresMaio}}</div></td>
+                <td data-th="Junho:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresJunho}}</div></td>
+                <td data-th="Julho:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresJulho}}</div></td>
+                <td data-th="Agosto:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresAgosto}}</div></td>
+                <td data-th="Setembro:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresSetembro}}</div></td>
+                <td data-th="Outubro:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresOutubro}}</div></td>
+                <td data-th="Novembro:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresNovembro}}</div></td>
+                <td data-th="Dezembro:&nbsp;" class="td-hover pl-2" ><div>{{model.ValoresDezembro}}</div></td>
+                
+                <td data-th="Total:&nbsp;" class="td-hover pl-2" ><div>{{model.Total}}</div></td>
+                <td data-th="Média:&nbsp;" class="td-hover pl-2" ><div>{{model.Media}}</div></td>
+                <td data-th="Orçado Real:&nbsp;" class="td-hover pl-2" ><div>{{model.OrcadoReal}}</div></td>
+                <td data-th="Orçado Real %:&nbsp;" class="td-hover pl-2" ><div>{{model.OrcadoRealPorcento}}</div></td>
+                <td data-th="Orçado Forecast:&nbsp;" class="td-hover pl-2" ><div>{{model.OrcadoForecast}}</div></td>
+                <td data-th="Orçado Forecast %:&nbsp;" class="td-hover pl-2" ><div>{{model.OrcadoForecastPorcento}}</div></td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+        <button type="submit" class="d-none">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="card-footer d-flex align-items-center gap-2">
+    <button type="button" class="btn btn-primary-line" (click)="onVoltar()">Voltar</button>
+    <button type="button" class="btn btn-success-line" (click)="onVoltar()">Enviar para Aprovação</button>
+  </div>
+</div>

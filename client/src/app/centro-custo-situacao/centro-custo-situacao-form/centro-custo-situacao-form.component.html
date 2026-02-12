@@ -1,0 +1,60 @@
+<form class="form" [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onSubmit()" autocomplete="off" #formDir="ngForm">
+  <div class="card">
+    <div class="card-header">
+      <app-header-form icone="fa-battery-4" title="Centro Custo Situação"/>
+    </div>
+    <div class="card-main d-flex justify-content-center align-items-start p-3">
+      <div class="card-content gap-3">  
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Informações</div>
+            <div class="row">
+              <app-input-form input="Id" Nível="Id" type="text" [control]="crud.form.getControl('Id')" class="d-none"/>
+              <app-combobox-form input="IdExercicio" label="Exercicio" [control]="crud.form.getControl('IdExercicio')" class="wp-100" [error]="crud.checkInputError('IdExercicio')"  [options]="data?.Exercicios"/>
+              <app-combobox-form input="IdCentroCurso" label="Centro Custo" [control]="crud.form.getControl('IdCentroCusto')" class="wp-100" [error]="crud.checkInputError('IdCentroCusto')"  [options]="data?.CentroCustos"/> 
+              <app-combobox-form input="IdCentroStatus" label="Status" [control]="crud.form.getControl('IdCentroStatus')" class="wp-100" [error]="crud.checkInputError('IdCentroStatus')"  [options]="data?.CentroStatus"/> 
+            </div>
+          </div>
+        </div>
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Usuário</div>
+            <div class="row">
+              <app-input-display-form Label="Usuário Atual" class="wp-100" [Value]="data?.CentroCustoUsuario?.Email" />
+              <app-input-display-form Label="Nível Atual" class="wp-100" [Value]="data?.CentroCustoUsuario?.Nivel" />
+              <app-input-display-form Label="Total de Nível" class="wp-100" [Value]="data?.CentroCusto?.NivelTotal" />
+            </div>
+          </div>
+        </div>
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Informações</div>
+            <div class="row">
+              <app-combobox-form input="Janeiro" label="Janeiro" [control]="crud.form.getControl('Janeiro')" class="wp-100" [error]="crud.checkInputError('Janeiro')"  [options]="data?.LancamentoTipos"/>
+              <app-combobox-form input="Fevereiro" label="Fevereiro" [control]="crud.form.getControl('Fevereiro')" class="wp-100" [error]="crud.checkInputError('Fevereiro')"  [options]="data?.LancamentoTipos"/> 
+              <app-combobox-form input="Marco" label="Março" [control]="crud.form.getControl('Marco')" class="wp-100" [error]="crud.checkInputError('Marco')"  [options]="data?.LancamentoTipos"/> 
+            </div>
+            <div class="row">
+              <app-combobox-form input="Abril" label="Abril" [control]="crud.form.getControl('Abril')" class="wp-100" [error]="crud.checkInputError('Abril')"  [options]="data?.LancamentoTipos"/>
+              <app-combobox-form input="Maio" label="Maio" [control]="crud.form.getControl('Maio')" class="wp-100" [error]="crud.checkInputError('Maio')"  [options]="data?.LancamentoTipos"/> 
+              <app-combobox-form input="Junho" label="Junho" [control]="crud.form.getControl('Junho')" class="wp-100" [error]="crud.checkInputError('Junho')"  [options]="data?.LancamentoTipos"/> 
+            </div>
+            <div class="row">
+              <app-combobox-form input="Julho" label="Julho" [control]="crud.form.getControl('Julho')" class="wp-100" [error]="crud.checkInputError('Julho')"  [options]="data?.LancamentoTipos"/>
+              <app-combobox-form input="Agosto" label="Agosto" [control]="crud.form.getControl('Agosto')" class="wp-100" [error]="crud.checkInputError('Agosto')"  [options]="data?.LancamentoTipos"/> 
+              <app-combobox-form input="Setembro" label="Setembro" [control]="crud.form.getControl('Setembro')" class="wp-100" [error]="crud.checkInputError('Setembro')"  [options]="data?.LancamentoTipos"/> 
+            </div>
+            <div class="row">
+              <app-combobox-form input="Outubro" label="Outubro" [control]="crud.form.getControl('Outubro')" class="wp-100" [error]="crud.checkInputError('Outubro')"  [options]="data?.LancamentoTipos"/>
+              <app-combobox-form input="Novembro" label="Novembro" [control]="crud.form.getControl('Novembro')" class="wp-100" [error]="crud.checkInputError('Novembro')"  [options]="data?.LancamentoTipos"/> 
+              <app-combobox-form input="Dezembro" label="Dezembro" [control]="crud.form.getControl('Dezembro')" class="wp-100" [error]="crud.checkInputError('Dezembro')"  [options]="data?.LancamentoTipos"/> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <app-footer-form [showFooterBtn]="crud.footerBtn" (eventVoltar)="crud.onBack()" (eventEditar)="crud.onEdit()" (eventCancelar)="crud.onCancel()" (eventDeletar)="crud.onDelete()"/>
+    </div>
+  </div>
+</form>

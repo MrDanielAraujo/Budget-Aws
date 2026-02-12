@@ -1,0 +1,62 @@
+.frameset {
+  width: 100%;
+  max-width: 900px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  padding-left: 7px;
+  border-radius: 7px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border: solid 1px $gray-400;
+  box-shadow: 7px 7px 10px -4px rgba(0, 0, 0, 0.15);
+
+  & > div {
+    background-color: $white;
+    width: 100%;
+
+    & > div:first-child {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: 'inter', 'Times New Roman', Times, serif;
+      padding: 5px;
+      border-bottom: solid 1px $gray-400;
+    }
+
+    & > div:last-child {
+      padding: 10px;
+    }
+  }
+}
+
+.frameset-primary {
+  background-color: $blue-200;
+
+  & > div { 
+    & > div:first-child {
+      color: $blue-200;
+     }
+  }
+}
+.frameset-danger {
+  background-color: $red-200;
+
+  & > div { 
+    & > div:first-child {
+      color: $red-200;
+     }
+  }
+}
+
+.frameset-success {
+  background-color: $green-200;
+
+  & > div { 
+    & > div:first-child {
+      color: $green-200;
+     }
+  }
+}

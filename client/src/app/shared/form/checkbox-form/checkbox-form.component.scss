@@ -1,0 +1,105 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/width";
+
+div.single-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.single-input-left {
+    flex-direction: row-reverse;
+  }
+
+  & label {
+    font-size: 14px;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    color: $blue-200;
+  }
+
+  & .checkbox-primary {
+    background-color: $gray-500 !important;
+    &:checked {
+      background-color: $blue-200 !important;
+    }
+    &:checked ~ label {
+      color: $blue-200 !important;
+    }
+
+    &:disabled,
+    &:disabled:checked {
+      background-color: $gray-500 !important;
+    }
+    &:disabled ~ label {
+      color: $gray-500 !important;
+    }
+  }
+
+  & .checkbox-danger {
+    background-color: $gray-500 !important;
+    &:checked {
+      background-color: $red-200 !important;
+    }
+    &:checked ~ label {
+      color: $red-200 !important;
+    }
+
+    &:disabled,
+    &:disabled:checked {
+      background-color: $gray-500 !important;
+    }
+    &:disabled:checked ~ label {
+      color: $gray-500 !important;
+    }
+  }
+
+  & .checkbox-success {
+    background-color: $gray-500 !important;
+    &:checked {
+      background-color: $green-200 !important;
+    }
+    &:checked ~ label {
+      color: $green-200 !important;
+    }
+
+    &:disabled,
+    &:disabled:checked {
+      background-color: $gray-500 !important;
+    }
+    &:disabled:checked ~ label {
+      color: $gray-500 !important;
+    }
+  }
+
+  & .checkbox {
+    margin-left: 5px;
+    -webkit-appearance: none;
+    position: relative;
+    width: 45px;
+    height: 20px;
+    background-color: $gray-200;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+
+    &:checked {
+      background-color: $gray-500;
+      &::before {
+        left: 29px;
+      }
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      top: 4px;
+      left: 4px;
+      transition: .3s linear;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="body" (click)="onBodyClick()">
+  <header>
+    <app-header/>
+  </header>
+  <main>
+    <app-loading/>
+    <app-alert/>
+    <div id="menuPrincipal" class="menu-principal display-none" (click)="onStopPropagation($event)">
+      <ul>
+        <app-menu-principal/>
+      </ul>
+    </div>
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="flex align-items-center max-height-p">
+    <app-footer/>
+  </footer>
+</div>
+
+
+
+
+
+ 

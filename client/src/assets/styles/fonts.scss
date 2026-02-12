@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'inter';
+  src: url('../fonts/Inter-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter-bold';
+  src: url('../fonts/Inter-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-icl {
+  font-family: 'inter', 'Times New Roman', Times, serif;
+}
+
+.font-blod-icl {
+  font-family: 'inter-bold', 'Times New Roman', Times, serif;
+}
+
+$size: 1rem !default;
+
+.font-size-icl-0 {
+  font-size: 0 !important;
+}
+
+.font-size-icl-1 {
+  font-size: ($size * .25) !important;
+}
+
+.font-size-icl-2 {
+  font-size: ($size * .5) !important;
+}
+
+.font-size-icl-3 {
+  font-size: ($size * .7) !important;
+}
+
+.font-size-icl-4 {
+  font-size: ($size * .9) !important;
+}
+
+.font-size-icl-5 {
+  font-size: $size  !important;
+}
+
+.font-size-icl-6 {
+  font-size: ($size * 1.25)  !important;
+}
+
+.font-size-icl-7 {
+  font-size: ($size * 1.5)  !important;
+}

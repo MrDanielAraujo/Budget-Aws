@@ -1,0 +1,27 @@
+<form class="form" [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onSubmit()" autocomplete="off" #formDir="ngForm">
+  <div class="card">
+    <div class="card-header">
+      <app-header-form icone="fa-people-group" title="Centro Custo Usuário"/>
+    </div>
+    <div class="card-main d-flex justify-content-center align-items-start p-3">
+      <div class="card-content gap-3">  
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Informações</div>
+            <div class="row">
+              <app-input-form input="Id" label="Id" type="text" [control]="crud.form.getControl('Id')" class="d-none"/>
+              <app-input-form input="Email" label="E-mail" type="text" [control]="crud.form.getControl('Email')" class="wp-100" [error]="crud.checkInputError('Email')" />
+              <app-input-form input="Nivel" label="Nível" type="text" [control]="crud.form.getControl('Nivel')" class="w-20 wp-m-100" [error]="crud.checkInputError('Nivel')" />
+            </div>
+            <div class="row">
+              <app-combobox-form input="IdCentroCusto" label="Centro Custo" [control]="crud.form.getControl('IdCentroCusto')" class="wp-100" [error]="crud.checkInputError('IdCentroCusto')"  [options]="data?.CentroCustos"/> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <app-footer-form [showFooterBtn]="crud.footerBtn" (eventVoltar)="crud.onBack()" (eventEditar)="crud.onEdit()" (eventCancelar)="crud.onCancel()" (eventDeletar)="crud.onDelete()"/>
+    </div>
+  </div>
+</form>

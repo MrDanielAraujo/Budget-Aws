@@ -1,0 +1,9 @@
+<input type="{{type}}" name="{{ input }}" id="{{ input }}" mask="{{ mask }}" 
+placeholder=" " 
+[formControl]="control" 
+[dropSpecialCharacters]="dropSpecialCharacters"
+[thousandSeparator]="thousandSeparator"
+[decimalMarker]="decimalMarker"
+[ngClass]="{'input-danger': error == true}"
+>
+<label for="{{ input }}">{{label}}</label>

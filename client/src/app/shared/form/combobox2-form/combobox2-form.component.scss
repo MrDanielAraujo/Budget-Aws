@@ -1,0 +1,347 @@
+@import "../../../../../src/assets/styles/colors";
+@import "../../../../../src/assets/styles/fonts";
+@import "../../../../../src/assets/styles/common";
+@import "../../../../../src/assets/styles/spacing";
+@import "../../../../../src/assets/styles/card";
+@import "../../../../../src/assets/styles/width";
+@import "../../../../../src/assets/styles/table";
+@import "../../../../../src/assets/styles/badge";
+
+.janela {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  //height: 100%;
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 102;
+  margin: 0;
+  padding: 10px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    max-width: 500px;
+    min-width: 340px;
+    max-height: 620px;
+    min-height: 245px;
+    position: relative;
+  
+    & div.content {
+      height: auto;
+      width: auto;
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      top: 40px;
+      background-color: $white;
+      border-radius: 5px;
+      border: solid 1px $white;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    & ul {
+      list-style-type: none;
+      padding: 10px;
+      margin: 0;
+      margin-top: 10px;
+      
+      & li {
+        font-family: 'inter', 'Times New Roman', Times, serif;
+        font-size: 12px;
+        padding-left: 5px;
+      }
+    }
+  
+    & div.bar-title {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    
+      & label {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: 'inter', 'Times New Roman', Times, serif;
+        font-weight:bolder;
+        & i {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+      }
+    
+      & span {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.janela-primary {
+  & > div {
+    border: solid 1px $blue-200;
+    background-color: $blue-180;
+  
+    & ul {
+      & li {
+        color: $blue-200;
+        border-left: 2px solid $blue-200;
+        padding-left: 5px;
+      }
+    }
+  
+    & div {
+      & label {
+        color: $blue-200;
+      }
+    
+      & span {
+        color: $blue-170;
+      }
+    }
+  }
+}
+
+div.single-select {
+  position: relative;
+  padding-top: 12px;
+
+  & label {
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: $gray-500;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+  }
+
+  & .input {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid $gray-500;
+    outline: 0;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    box-sizing: border-box;
+
+    &:focus, 
+    &:has(option[value^="0"]:checked),
+    &:has(option[value^="1"]:checked),
+    &:has(option[value^="2"]:checked),
+    &:has(option[value^="3"]:checked),
+    &:has(option[value^="4"]:checked),
+    &:has(option[value^="5"]:checked),
+    &:has(option[value^="6"]:checked),
+    &:has(option[value^="7"]:checked),
+    &:has(option[value^="8"]:checked),
+    &:has(option[value^="9"]:checked) {
+      border-bottom: 2px solid $gray-500;
+    }
+
+    &.input-danger {
+      border-bottom: 2px solid $red-200 !important;
+    }
+
+    &:focus.input-primary, 
+    &:has(option[value^="0"]:checked).input-primary,
+    &:has(option[value^="1"]:checked).input-primary,
+    &:has(option[value^="2"]:checked).input-primary,
+    &:has(option[value^="3"]:checked).input-primary,
+    &:has(option[value^="4"]:checked).input-primary,
+    &:has(option[value^="5"]:checked).input-primary,
+    &:has(option[value^="6"]:checked).input-primary,
+    &:has(option[value^="7"]:checked).input-primary,
+    &:has(option[value^="8"]:checked).input-primary,
+    &:has(option[value^="9"]:checked).input-primary {
+      border-bottom: 2px solid $blue-200 !important;
+    }
+    &:focus.input-danger,
+    &:has(option[value^="0"]:checked).input-danger,
+    &:has(option[value^="1"]:checked).input-danger,
+    &:has(option[value^="2"]:checked).input-danger,
+    &:has(option[value^="3"]:checked).input-danger,
+    &:has(option[value^="4"]:checked).input-danger,
+    &:has(option[value^="5"]:checked).input-danger,
+    &:has(option[value^="6"]:checked).input-danger,
+    &:has(option[value^="7"]:checked).input-danger,
+    &:has(option[value^="8"]:checked).input-danger,
+    &:has(option[value^="9"]:checked).input-danger {
+      border-bottom: 2px solid $red-200 !important;
+    }
+    &:focus.input-success,
+    &:has(option[value^="0"]:checked).input-success,
+    &:has(option[value^="1"]:checked).input-success,
+    &:has(option[value^="2"]:checked).input-success,
+    &:has(option[value^="3"]:checked).input-success,
+    &:has(option[value^="4"]:checked).input-success,
+    &:has(option[value^="5"]:checked).input-success,
+    &:has(option[value^="6"]:checked).input-success,
+    &:has(option[value^="7"]:checked).input-success,
+    &:has(option[value^="8"]:checked).input-success,
+    &:has(option[value^="9"]:checked).input-success {
+      border-bottom: 2px solid $green-200 !important;
+    }
+
+    &:disabled:has(option[value^="0"]:checked).input-primary,
+    &:disabled:has(option[value^="1"]:checked).input-primary,
+    &:disabled:has(option[value^="2"]:checked).input-primary,
+    &:disabled:has(option[value^="3"]:checked).input-primary,
+    &:disabled:has(option[value^="4"]:checked).input-primary,
+    &:disabled:has(option[value^="5"]:checked).input-primary,
+    &:disabled:has(option[value^="6"]:checked).input-primary,
+    &:disabled:has(option[value^="7"]:checked).input-primary,
+    &:disabled:has(option[value^="8"]:checked).input-primary,
+    &:disabled:has(option[value^="9"]:checked).input-primary {
+      border-bottom: 2px solid $gray-500 !important;
+    }
+
+    &:disabled:has(option[value^="0"]:checked).input-danger,
+    &:disabled:has(option[value^="1"]:checked).input-danger,
+    &:disabled:has(option[value^="2"]:checked).input-danger,
+    &:disabled:has(option[value^="3"]:checked).input-danger,
+    &:disabled:has(option[value^="4"]:checked).input-danger,
+    &:disabled:has(option[value^="5"]:checked).input-danger,
+    &:disabled:has(option[value^="6"]:checked).input-danger,
+    &:disabled:has(option[value^="7"]:checked).input-danger,
+    &:disabled:has(option[value^="8"]:checked).input-danger,
+    &:disabled:has(option[value^="9"]:checked).input-danger {
+      border-bottom: 2px solid $gray-500 !important;
+    }
+
+    &:disabled:has(option[value^="0"]:checked).input-success,
+    &:disabled:has(option[value^="1"]:checked).input-success,
+    &:disabled:has(option[value^="2"]:checked).input-success,
+    &:disabled:has(option[value^="3"]:checked).input-success,
+    &:disabled:has(option[value^="4"]:checked).input-success,
+    &:disabled:has(option[value^="5"]:checked).input-success,
+    &:disabled:has(option[value^="6"]:checked).input-success,
+    &:disabled:has(option[value^="7"]:checked).input-success,
+    &:disabled:has(option[value^="8"]:checked).input-success,
+    &:disabled:has(option[value^="9"]:checked).input-success {
+      border-bottom: 2px solid $gray-500 !important;
+    }
+
+
+    &:focus ~ label,  &:disabled ~ label, 
+    &:has(option[value^="0"]:checked) ~ label,
+    &:has(option[value^="1"]:checked) ~ label,
+    &:has(option[value^="2"]:checked) ~ label,
+    &:has(option[value^="3"]:checked) ~ label,
+    &:has(option[value^="4"]:checked) ~ label,
+    &:has(option[value^="5"]:checked) ~ label,
+    &:has(option[value^="6"]:checked) ~ label,
+    &:has(option[value^="7"]:checked) ~ label,
+    &:has(option[value^="8"]:checked) ~ label,
+    &:has(option[value^="9"]:checked) ~ label {
+      transform: translateY(-24px);
+      font-size: 10px;
+    }
+
+    &.input-danger ~ label {
+      color: $red-200 !important;
+    }
+
+    &:focus.input-primary ~ label,
+    &:has(option[value^="0"]:checked).input-primary ~ label,
+    &:has(option[value^="1"]:checked).input-primary ~ label, 
+    &:has(option[value^="2"]:checked).input-primary ~ label, 
+    &:has(option[value^="3"]:checked).input-primary ~ label, 
+    &:has(option[value^="4"]:checked).input-primary ~ label, 
+    &:has(option[value^="5"]:checked).input-primary ~ label, 
+    &:has(option[value^="6"]:checked).input-primary ~ label, 
+    &:has(option[value^="7"]:checked).input-primary ~ label, 
+    &:has(option[value^="8"]:checked).input-primary ~ label, 
+    &:has(option[value^="9"]:checked).input-primary ~ label {
+      color: $blue-200 !important;
+    }
+
+    &:focus.input-danger ~ label, 
+    &:has(option[value^="0"]:checked).input-danger ~ label,
+    &:has(option[value^="1"]:checked).input-danger ~ label, 
+    &:has(option[value^="2"]:checked).input-danger ~ label, 
+    &:has(option[value^="3"]:checked).input-danger ~ label, 
+    &:has(option[value^="4"]:checked).input-danger ~ label, 
+    &:has(option[value^="5"]:checked).input-danger ~ label, 
+    &:has(option[value^="6"]:checked).input-danger ~ label, 
+    &:has(option[value^="7"]:checked).input-danger ~ label, 
+    &:has(option[value^="8"]:checked).input-danger ~ label, 
+    &:has(option[value^="9"]:checked).input-danger ~ label {
+      color: $red-200 !important;
+    }
+
+    &:focus.input-success ~ label, 
+    &:has(option[value^="0"]:checked).input-success ~ label,
+    &:has(option[value^="1"]:checked).input-success ~ label, 
+    &:has(option[value^="2"]:checked).input-success ~ label, 
+    &:has(option[value^="3"]:checked).input-success ~ label, 
+    &:has(option[value^="4"]:checked).input-success ~ label, 
+    &:has(option[value^="5"]:checked).input-success ~ label, 
+    &:has(option[value^="6"]:checked).input-success ~ label, 
+    &:has(option[value^="7"]:checked).input-success ~ label, 
+    &:has(option[value^="8"]:checked).input-success ~ label, 
+    &:has(option[value^="9"]:checked).input-success ~ label {
+      color: $green-200 !important;
+    }
+
+    &:disabled, &:disabled ~ label{
+      background-color: transparent !important;
+      color: $gray-500 !important;
+    }
+
+    &:disabled:has(option[value^="0"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="1"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="2"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="3"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="4"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="5"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="6"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="7"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="8"]:checked).input-primary ~ label,
+    &:disabled:has(option[value^="9"]:checked).input-primary ~ label {
+      color: $gray-500 !important;
+    }
+
+    &:disabled:has(option[value^="0"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="1"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="2"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="3"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="4"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="5"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="6"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="7"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="8"]:checked).input-danger ~ label,
+    &:disabled:has(option[value^="9"]:checked).input-danger ~ label {
+      color: $gray-500 !important;
+    }
+
+    &:disabled:has(option[value^="0"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="1"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="2"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="3"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="4"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="5"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="6"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="7"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="8"]:checked).input-success ~ label,
+    &:disabled:has(option[value^="9"]:checked).input-success ~ label {
+      color: $gray-500 !important;
+    }
+
+  }
+}

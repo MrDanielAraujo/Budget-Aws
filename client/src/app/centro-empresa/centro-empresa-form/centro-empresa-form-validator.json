@@ -1,0 +1,29 @@
+{
+  "Errors": [
+    {
+      "InputName": "Id",
+      "TypeError": "required",
+      "Message": "O Campo Id é obrigatório."
+    },
+    {
+      "InputName": "Nome",
+      "TypeError": "required",
+      "Message": "O Campo Nome é obrigatório."
+    },
+    {
+      "InputName": "NomeReal",
+      "TypeError": "required",
+      "Message": "O Campo Nome Real é obrigatório."
+    },
+    {
+      "InputName": "Codigo",
+      "TypeError": "required",
+      "Message": "O Campo Nome Código é obrigatório."
+    },
+    {
+      "InputName": "Codigo",
+      "TypeError": "maxlength",
+      "Message": "O Código da empresa não pode ultrapassar 6 characters."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/common";
+@import "../../../../assets/styles/width";
+@import "../../../../assets/styles/spacing";
+
+:host {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+
+  & > label {
+    font-size: 10px;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    color: $gray-500;
+  }
+  & > div {
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 7px;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    border-bottom: solid 2px $gray-500;
+    text-align: start;
+    font-size: 14px;
+    color: $gray-500;
+  }
+
+  &.dados-fixos-primary {
+    & > label {
+      color: $blue-200 !important;
+    }
+    & > div {
+      border-bottom: solid 1px $blue-200 !important;
+      color: $blue-200 !important;
+    }
+  }
+
+  &.dados-fixos-success {
+    & > label {
+      color: $green-200 !important;
+    }
+    & > div {
+      border-bottom: solid 1px $green-200 !important;
+      color: $green-200 !important;
+    }
+  }
+
+  &.dados-fixos-danger {
+    & > label {
+      color: $red-200 !important;
+    }
+    & > div {
+      border-bottom: solid 1px $red-200 !important;
+      color: $red-200 !important;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import "fonts";
+
+$blue-10: #8fe6e5 !default;
+$blue: #00b5d3 !default;
+$blue-100: #009fdf !default;
+$blue-150: #00a0df73 !default;
+$blue-170: #93c5e9 !default;
+$blue-180: #d8efff !default;
+$blue-200: #002846 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$red-170: #e99393 !default;
+$red-180: #ffe2e2 !default;
+$red-200: #a56a6a !default;
+$yellow-170: #e9e393 !default;
+$yellow-180: #fffee2 !default;
+$yellow-200: #a5a46a !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$green-170: #abedcc !default;
+$green-180: #E2FFE7 !default;
+$green-200: #6AA583 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$darkBlue: #002949 !default; 
+
+$white: #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-101: #f4f3ef !default;
+$gray-110: #f2f2f2 !default;
+$gray-150: #eeeeee !default;
+$gray-200: #e9ecef !default; 
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-450: #d4d6dc !default;
+$gray-480: #c9c9c9 !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000000 !default;
+
+$main-bg:  #f4f3ef !default;
+$card-border: #252422 !default;
+$box-shadow: rgb(0 0 0 / 15%) !default;
+$red-bg: #ff000017 !default;
+$yellow-bg: #ffff0017 !default;
+$green-bg: #00800017 !default;
+$blue-bg: #00b5d317 !default;
+
+$primary-bg: rgba(0,0,0, .7);
+
+
+.danger {
+  background-color: $red-180 !important;
+  color: $red-200 !important;
+}
+
+.success {
+  background-color: $green-180 !important;
+  color: $green-200 !important;
+}
+
+.primary {
+  background-color: $blue-180 !important;
+  color: $blue-200 !important;
+}
+
+.black {
+  background-color: $white !important;
+  color: $blue-200 !important;
+}
+
+.primary-black {
+  background-color: $blue-200 !important;
+  color: $white !important;
+}
+
+.text-danger {
+  color: $red-200 !important;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+}
+
+.text-success {
+  color: $green-200 !important;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+}
+
+.text-primary {
+  color: $blue-200 !important;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+}
+
+.text-light {
+  color: $white !important;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+}
+
+.text-secondary {
+  color: $gray-600 !important;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+}
+
+.icon-color-danger {
+  color: $red-200 !important;
+}
+
+.icon-color-success {
+  color: $green-200 !important;
+}
+
+.icon-color-primary {
+  color: $blue-200 !important;
+}
+
+.icon-color-warning {
+  color: $yellow-200 !important;
+}
+
+.icon-color-light {
+  color: $white !important;
+}
+
+.icon-color-ghost {
+  color: transparent !important;
+}

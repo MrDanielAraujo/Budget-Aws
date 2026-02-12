@@ -1,0 +1,18 @@
+<dir *ngIf="alertService.message.length >= 1" class="block-sistem-access"></dir>
+<div *ngIf="alertService.message.length >= 1" class="alert" [ngClass]="'alert-'+alertService.type" (click)="alertService.cancelar($event)">
+  <div>
+    <div>
+      <label><i class="fa-solid" [ngClass]="[alertService.type == 'success' ? 'fa-check' : alertService.type == 'primary' ? 'fas fa-info-circle' : 'fa-ban']"></i>{{alertService.title}}</label>
+      <span class="fa-solid fa-xmark" (click)="alertService.cancelar($event)"></span>
+    </div>
+    <ul>
+      <li *ngFor="let msg of alertService.message">{{msg}}</li>
+    </ul>
+    <div class="d-flex justify-content-end mt-2" *ngIf="alertService.confirmar">
+      <button class="btn btn-dark-line ml-2" (click)="alertService.cancelar($event)" >Cancelar</button>
+      <button class="btn btn-success-line ml-2" (click)="alertService.concordar($event)" >Confirmar</button>
+    </div>
+  </div>
+</div>
+
+

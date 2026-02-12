@@ -1,0 +1,21 @@
+<form class="form" [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onSubmit()" autocomplete="off" #formDir="ngForm">
+  <div class="card">
+    <div class="card-header">
+      <app-header-form icone="fa-clipboard-user" title="Funcionário Cargo"/>
+    </div>
+    <div class="card-main d-flex justify-content-center align-items-start p-3">
+        <div class="frameset frameset-primary ">
+          <div>
+            <div>Informações</div>
+            <div class="row">
+              <app-input-form input="Id" label="Id" type="text" [control]="crud.form.getControl('Id')" class="d-none"/>
+              <app-input-form input="Nome" label="Nome" type="text" [control]="crud.form.getControl('Nome')" class="w-30 wp-m-100" [error]="crud.checkInputError('Nome')" />     
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="card-footer">
+      <app-footer-form [showFooterBtn]="crud.footerBtn" (eventVoltar)="crud.onBack()" (eventEditar)="crud.onEdit()" (eventCancelar)="crud.onCancel()" (eventDeletar)="crud.onDelete()"/>
+    </div>
+  </div>
+</form>

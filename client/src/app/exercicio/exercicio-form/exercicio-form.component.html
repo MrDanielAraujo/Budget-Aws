@@ -1,0 +1,25 @@
+<form class="form" [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onSubmit()" autocomplete="off" #formDir="ngForm">
+  <div class="card">
+    <div class="card-header">
+      <app-header-form icone="fa-calendar-check" title="Exercício"/>
+    </div>
+    <div class="card-main d-flex justify-content-center align-items-start p-3">
+        <div class="frameset frameset-primary ">
+          <div class="pb-2">
+            <div class="mb-2">Informações</div>
+            <div class="row">
+              <app-input-form input="Id" label="Id" type="text" [control]="crud.form.getControl('Id')" class="d-none"/>
+              <app-input-form input="Ano" label="Ano" type="tel" [control]="crud.form.getControl('Ano')" class="w-10" mask="0000" [error]="crud.checkInputError('Ano')" />
+            </div>
+            <hr class="m-2 mt-3">
+            <div class="row">
+              <app-checkbox-form input="Aberto" label="Aberto" [control]="crud.form.getControl('Aberto')" class="single-input-left" classInput="checkbox-primary"/>     
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="card-footer">
+      <app-footer-form [showFooterBtn]="crud.footerBtn" (eventVoltar)="crud.onBack()" (eventEditar)="crud.onEdit()" (eventCancelar)="crud.onCancel()" (eventDeletar)="crud.onDelete()"/>
+    </div>
+  </div>
+</form>

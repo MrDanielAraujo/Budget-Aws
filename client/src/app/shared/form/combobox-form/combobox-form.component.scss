@@ -1,0 +1,231 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/common";
+@import "../../../../assets/styles/width";
+@import "../../../../assets/styles/spacing";
+
+:host{
+  display: flex;
+  position: relative;
+  padding-top: 12px;
+  & label {
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: $gray-500;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+  }
+  & select {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid $gray-500;
+    outline: 0;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    &:focus, 
+    &:has(option[value^="0"]:checked),
+    &:has(option[value^="1"]:checked),
+    &:has(option[value^="2"]:checked),
+    &:has(option[value^="3"]:checked),
+    &:has(option[value^="4"]:checked),
+    &:has(option[value^="5"]:checked),
+    &:has(option[value^="6"]:checked),
+    &:has(option[value^="7"]:checked),
+    &:has(option[value^="8"]:checked),
+    &:has(option[value^="9"]:checked) {
+      border-bottom: 2px solid $gray-500;
+    }
+    &:focus ~ label,  &:disabled ~ label, 
+    &:has(option[value^="0"]:checked) ~ label,
+    &:has(option[value^="1"]:checked) ~ label,
+    &:has(option[value^="2"]:checked) ~ label,
+    &:has(option[value^="3"]:checked) ~ label,
+    &:has(option[value^="4"]:checked) ~ label,
+    &:has(option[value^="5"]:checked) ~ label,
+    &:has(option[value^="6"]:checked) ~ label,
+    &:has(option[value^="7"]:checked) ~ label,
+    &:has(option[value^="8"]:checked) ~ label,
+    &:has(option[value^="9"]:checked) ~ label {
+      transform: translateY(-24px);
+      font-size: 10px;
+    }
+    &:disabled, &:disabled ~ label{
+      background-color: transparent !important;
+      color: $gray-500 !important;
+    }
+  }
+  &.input-danger {
+    & select {
+      border-bottom: 2px solid $red-200 !important;
+      
+      &:focus, 
+      &:has(option[value^="0"]:checked),
+      &:has(option[value^="1"]:checked),
+      &:has(option[value^="2"]:checked),
+      &:has(option[value^="3"]:checked),
+      &:has(option[value^="4"]:checked),
+      &:has(option[value^="5"]:checked),
+      &:has(option[value^="6"]:checked),
+      &:has(option[value^="7"]:checked),
+      &:has(option[value^="8"]:checked),
+      &:has(option[value^="9"]:checked) {
+        border-bottom: 2px solid $red-200 !important;
+      }
+      &:disabled:has(option[value^="0"]:checked),
+      &:disabled:has(option[value^="1"]:checked),
+      &:disabled:has(option[value^="2"]:checked),
+      &:disabled:has(option[value^="3"]:checked),
+      &:disabled:has(option[value^="4"]:checked),
+      &:disabled:has(option[value^="5"]:checked),
+      &:disabled:has(option[value^="6"]:checked),
+      &:disabled:has(option[value^="7"]:checked),
+      &:disabled:has(option[value^="8"]:checked),
+      &:disabled:has(option[value^="9"]:checked) {
+        border-bottom: 2px solid $gray-500 !important;
+      }
+      & ~ label {
+        color: $red-200 !important;
+      }
+      &:focus ~ label, 
+      &:has(option[value^="0"]:checked) ~ label,
+      &:has(option[value^="1"]:checked) ~ label, 
+      &:has(option[value^="2"]:checked) ~ label, 
+      &:has(option[value^="3"]:checked) ~ label, 
+      &:has(option[value^="4"]:checked) ~ label, 
+      &:has(option[value^="5"]:checked) ~ label, 
+      &:has(option[value^="6"]:checked) ~ label, 
+      &:has(option[value^="7"]:checked) ~ label, 
+      &:has(option[value^="8"]:checked) ~ label, 
+      &:has(option[value^="9"]:checked) ~ label {
+        color: $red-200 !important;
+      }
+      &:disabled:has(option[value^="0"]:checked) ~ label,
+      &:disabled:has(option[value^="1"]:checked) ~ label,
+      &:disabled:has(option[value^="2"]:checked) ~ label,
+      &:disabled:has(option[value^="3"]:checked) ~ label,
+      &:disabled:has(option[value^="4"]:checked) ~ label,
+      &:disabled:has(option[value^="5"]:checked) ~ label,
+      &:disabled:has(option[value^="6"]:checked) ~ label,
+      &:disabled:has(option[value^="7"]:checked) ~ label,
+      &:disabled:has(option[value^="8"]:checked) ~ label,
+      &:disabled:has(option[value^="9"]:checked) ~ label {
+        color: $gray-500 !important;
+      }
+    }
+  }
+
+  &.input-primary {
+    & select {
+      &:focus, 
+      &:has(option[value^="0"]:checked),
+      &:has(option[value^="1"]:checked),
+      &:has(option[value^="2"]:checked),
+      &:has(option[value^="3"]:checked),
+      &:has(option[value^="4"]:checked),
+      &:has(option[value^="5"]:checked),
+      &:has(option[value^="6"]:checked),
+      &:has(option[value^="7"]:checked),
+      &:has(option[value^="8"]:checked),
+      &:has(option[value^="9"]:checked) {
+        border-bottom: 2px solid $blue-200;
+      }
+      &:disabled:has(option[value^="0"]:checked),
+      &:disabled:has(option[value^="1"]:checked),
+      &:disabled:has(option[value^="2"]:checked),
+      &:disabled:has(option[value^="3"]:checked),
+      &:disabled:has(option[value^="4"]:checked),
+      &:disabled:has(option[value^="5"]:checked),
+      &:disabled:has(option[value^="6"]:checked),
+      &:disabled:has(option[value^="7"]:checked),
+      &:disabled:has(option[value^="8"]:checked),
+      &:disabled:has(option[value^="9"]:checked) {
+        border-bottom: 2px solid $gray-500;
+      }
+      &:focus ~ label, 
+      &:has(option[value^="0"]:checked) ~ label,
+      &:has(option[value^="1"]:checked) ~ label, 
+      &:has(option[value^="2"]:checked) ~ label, 
+      &:has(option[value^="3"]:checked) ~ label, 
+      &:has(option[value^="4"]:checked) ~ label, 
+      &:has(option[value^="5"]:checked) ~ label, 
+      &:has(option[value^="6"]:checked) ~ label, 
+      &:has(option[value^="7"]:checked) ~ label, 
+      &:has(option[value^="8"]:checked) ~ label, 
+      &:has(option[value^="9"]:checked) ~ label {
+        color: $blue-200;
+      }
+      &:disabled:has(option[value^="0"]:checked) ~ label,
+      &:disabled:has(option[value^="1"]:checked) ~ label,
+      &:disabled:has(option[value^="2"]:checked) ~ label,
+      &:disabled:has(option[value^="3"]:checked) ~ label,
+      &:disabled:has(option[value^="4"]:checked) ~ label,
+      &:disabled:has(option[value^="5"]:checked) ~ label,
+      &:disabled:has(option[value^="6"]:checked) ~ label,
+      &:disabled:has(option[value^="7"]:checked) ~ label,
+      &:disabled:has(option[value^="8"]:checked) ~ label,
+      &:disabled:has(option[value^="9"]:checked) ~ label {
+        color: $gray-500;
+      }
+    }
+  }
+
+  &.input-success {
+    & select {
+      &:focus, 
+      &:has(option[value^="0"]:checked),
+      &:has(option[value^="1"]:checked),
+      &:has(option[value^="2"]:checked),
+      &:has(option[value^="3"]:checked),
+      &:has(option[value^="4"]:checked),
+      &:has(option[value^="5"]:checked),
+      &:has(option[value^="6"]:checked),
+      &:has(option[value^="7"]:checked),
+      &:has(option[value^="8"]:checked),
+      &:has(option[value^="9"]:checked) {
+        border-bottom: 2px solid $green-200;
+      }
+      &:disabled:has(option[value^="0"]:checked),
+      &:disabled:has(option[value^="1"]:checked),
+      &:disabled:has(option[value^="2"]:checked),
+      &:disabled:has(option[value^="3"]:checked),
+      &:disabled:has(option[value^="4"]:checked),
+      &:disabled:has(option[value^="5"]:checked),
+      &:disabled:has(option[value^="6"]:checked),
+      &:disabled:has(option[value^="7"]:checked),
+      &:disabled:has(option[value^="8"]:checked),
+      &:disabled:has(option[value^="9"]:checked) {
+        border-bottom: 2px solid $gray-500;
+      }
+      &:focus ~ label, 
+      &:has(option[value^="0"]:checked) ~ label,
+      &:has(option[value^="1"]:checked) ~ label, 
+      &:has(option[value^="2"]:checked) ~ label, 
+      &:has(option[value^="3"]:checked) ~ label, 
+      &:has(option[value^="4"]:checked) ~ label, 
+      &:has(option[value^="5"]:checked) ~ label, 
+      &:has(option[value^="6"]:checked) ~ label, 
+      &:has(option[value^="7"]:checked) ~ label, 
+      &:has(option[value^="8"]:checked) ~ label, 
+      &:has(option[value^="9"]:checked) ~ label {
+        color: $green-200;
+      }
+      &:disabled:has(option[value^="0"]:checked) ~ label,
+      &:disabled:has(option[value^="1"]:checked) ~ label,
+      &:disabled:has(option[value^="2"]:checked) ~ label,
+      &:disabled:has(option[value^="3"]:checked) ~ label,
+      &:disabled:has(option[value^="4"]:checked) ~ label,
+      &:disabled:has(option[value^="5"]:checked) ~ label,
+      &:disabled:has(option[value^="6"]:checked) ~ label,
+      &:disabled:has(option[value^="7"]:checked) ~ label,
+      &:disabled:has(option[value^="8"]:checked) ~ label,
+      &:disabled:has(option[value^="9"]:checked) ~ label {
+        color: $gray-500;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<button type="button" class="btn btn-primary-line" (click)="onIconsShow()"><i class="fa-solid fa-icons"></i></button>
+<dir class="block-sistem-access" *ngIf="iconsShow"></dir>
+<div class="alert alert-primary" *ngIf="iconsShow">
+  <div>
+    <div>
+      <label><i class="fa-solid fa-icons"></i>Lista de Icones</label>
+      <span class="fa-solid fa-xmark" (click)="onIconsShow()"></span>
+    </div>
+    <div class="filtro">
+      <i class="fa-solid fas fa-search ml-2"></i>
+      <input type="text" name="" id="" [(ngModel)]="filtro" class=" wp-90">
+      <i class="fa-solid fas fa-xmark mr-2" (click)="onCleanSearch()"></i>
+    </div>
+    <ul>
+      <li (click)="onIconSelect($event, '')"></li>
+      <li *ngFor="let item of onGetIcons()" (click)="onIconSelect($event, item)"><i class="fa-solid fa-{{item}}"></i>{{item}}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,340 @@
+[
+  {
+    "icone": "fa-solid fa-home",
+    "iconeColor": "text-teal",
+    "nome": "Home",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "home",
+    "route": "home"
+  },
+  {
+    "icone": "fa-solid fa-calendar-check",
+    "iconeColor": "text-teal",
+    "nome": "Exercício",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "exercicio",
+    "route": "exercicio/false"
+  },
+  {
+    "icone": "fa-solid fa-layer-group",
+    "iconeColor": "text-teal",
+    "nome": "Lançamento Tipo",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "lancamentoTipo",
+    "route": "lancamentoTipo/false"
+  },
+  {
+    "icone": "fa-solid fa-coins",
+    "iconeColor": "text-teal",
+    "nome": "Conta Contábil",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-down",
+    "setaColor": "",
+    "modulo": "subMenu",
+    "route": "",
+    "menu": [
+      {
+        "icone": "fa-solid fa-tag",
+        "iconeColor": "text-teal",
+        "nome": "Classificação",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "contaContabilClassificacao",
+        "route": "contaContabilClassificacao/false"
+      },
+      {
+        "icone": "fa-solid fa-flask",
+        "iconeColor": "text-teal",
+        "nome": "Formula",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "contaContabilFormula",
+        "route": "contaContabilFormula/false"
+      },
+      {
+        "icone": "fa-solid fa-coins",
+        "iconeColor": "text-teal",
+        "nome": "C.C.",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "contaContabil",
+        "route": "contaContabil/false"
+      }
+    ]
+  },
+  {
+    "icone": "fa-solid fa-arrows-to-circle",
+    "iconeColor": "text-teal",
+    "nome": "Centro",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-down",
+    "setaColor": "",
+    "modulo": "submenu",
+    "route": "",
+    "menu": [
+      {
+        "icone": "fa-solid fa-cubes",
+        "iconeColor": "text-teal",
+        "nome": "Classe",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroClasse",
+        "route": "centroClasse/false"
+      },
+      {
+        "icone": "fa-solid fa-user-tie",
+        "iconeColor": "text-teal",
+        "nome": "Diretoria",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroDiretoria",
+        "route": "centroDiretoria/false"
+      },
+      {
+        "icone": "fa-solid fa-boxes-stacked",
+        "iconeColor": "text-teal",
+        "nome": "Categoria",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroCategoria",
+        "route": "centroCategoria/false"
+      },
+      {
+        "icone": "fa-solid fa-building",
+        "iconeColor": "text-teal",
+        "nome": "Empresa",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroEmpresa",
+        "route": "centroEmpresa/false"
+      },
+      {
+        "icone": "fa-solid fa-city",
+        "iconeColor": "text-teal",
+        "nome": "Filial",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroFilial",
+        "route": "centroFilial/false"
+      },
+      {
+        "icone": "fa-solid fa-sack-dollar",
+        "iconeColor": "text-teal",
+        "nome": "Lucro",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroLucro",
+        "route": "centroLucro/false"
+      },
+      {
+        "icone": "fa-solid fa-battery-4",
+        "iconeColor": "text-teal",
+        "nome": "Lucro Situação",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroLucroSituacao",
+        "route": "centroLucroSituacao/false"
+      },
+      {
+        "icone": "fa-solid fa-people-group",
+        "iconeColor": "text-teal",
+        "nome": "Lucro Usuário",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroLucroUsuario",
+        "route": "centroLucroUsuario/false"
+      },
+      {
+        "icone": "fa-solid fa-money-check-dollar",
+        "iconeColor": "text-teal",
+        "nome": "Custo",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroCusto",
+        "route": "centroCusto/false"
+      },
+      {
+        "icone": "fa-solid fa-battery-4",
+        "iconeColor": "text-teal",
+        "nome": "Custo Situação",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroCustoSituacao",
+        "route": "centroCustoSituacao/false"
+      },
+      {
+        "icone": "fas fa-table",
+        "iconeColor": "text-teal",
+        "nome": "Custo Lançamentos",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroCustoLancamento",
+        "route": "centroCustoLancamento/false"
+      },
+      {
+        "icone": "fa-solid fa-people-group",
+        "iconeColor": "text-teal",
+        "nome": "Custo Usuário",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroCustoUsuario",
+        "route": "centroCustoUsuario/false"
+      },
+      {
+        "icone": "fa-solid fa-traffic-light",
+        "iconeColor": "text-teal",
+        "nome": "Status",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "centroStatus",
+        "route": "centroStatus/false"
+      }
+    ]
+  },
+  {
+    "icone": "fa-solid fa-user",
+    "iconeColor": "text-teal",
+    "nome": "Funcionários",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-down",
+    "setaColor": "",
+    "modulo": "Funcionarios",
+    "route": "",
+    "menu": [
+      {
+        "icone": "fa-solid fa-clipboard-user",
+        "iconeColor": "text-teal",
+        "nome": "Cargo",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "funcionarioCargo",
+        "route": "funcionarioCargo/false"
+      },
+      {
+        "icone": "fa-solid fa-address-book",
+        "iconeColor": "text-teal",
+        "nome": "Contratação",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "funcionarioContratacao",
+        "route": "funcionarioContratacao/false"
+      },
+      {
+        "icone": "fa-solid fa-user-pen",
+        "iconeColor": "text-teal",
+        "nome": "Funcionário",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "funcionario",
+        "route": "funcionario/false"
+      },
+      {
+        "icone": "fa-solid fa-children",
+        "iconeColor": "text-teal",
+        "nome": "Dependente",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "funcionarioDependente",
+        "route": "funcionarioDependente/false"
+      }
+    ]
+  },
+  {
+    "icone": "fa-solid fa-grip-lines",
+    "iconeColor": "text-teal",
+    "nome": "Combons",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-down",
+    "setaColor": "",
+    "modulo": "combons",
+    "route": "v1/admin/combons",
+    "menu": [
+      {
+        "icone": "fa-solid fa-chart-gantt",
+        "iconeColor": "text-teal",
+        "nome": "Separadores",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "comboSeparador",
+        "route": "comboSeparador/false"
+      },
+      {
+        "icone": "fa-solid fa-circle-info",
+        "iconeColor": "text-teal",
+        "nome": "Informações",
+        "nomeColor": "text-teal",
+        "seta": "fa-solid fa-chevron-right",
+        "setaColor": "",
+        "modulo": "comboInformacoes",
+        "route": "comboInformacoes/false"
+      }
+    ]
+  },
+  {
+    "icone": "fa-solid fa-sliders",
+    "iconeColor": "text-teal",
+    "nome": "Parâmetro",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "parametro",
+    "route": "parametro/false"
+  },
+  {
+    "icone": "fa-solid fa-store",
+    "iconeColor": "text-teal",
+    "nome": "Mercado",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "mercado",
+    "route": "mercado/false"
+  },
+  {
+    "icone": "fa-solid fa-box-open",
+    "iconeColor": "text-teal",
+    "nome": "Produto",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "produto",
+    "route": "produto/false"
+  },
+  {
+    "icone": "fa-regular fa-address-card",
+    "iconeColor": "text-teal",
+    "nome": "Perfil",
+    "nomeColor": "text-teal",
+    "seta": "fa-solid fa-chevron-right",
+    "setaColor": "",
+    "modulo": "profile",
+    "route": "v1/admin/profiles"
+  }
+]

@@ -1,0 +1,46 @@
+<div class="single-select" [ngClass]="class">
+  <select name="{{ input }}" id="{{ input }}" [formControl]="control" class="pl-0 wp-100 input {{classInput}}" [ngClass]="{'input-danger': control.invalid && (submit || control.touched) }" (click)="getValueServer()">
+    <option class="d-none" value="{{control.value}}">{{descricao}}</option>
+  </select>
+  <label for="{{ input }}" (click)="getValueServer()">{{label}}</label>
+</div>
+<input type="hidden" name="{{ input }}" id="{{ input }}" [formControl]="control">
+
+
+<div *ngIf="showSelectOptions" class="janela janela-primary">
+  <div>
+    <div class="bar-title">
+      <label><i class="fa-solid"></i>{{label}}</label>
+      <span class="fa-solid fa-xmark" (click)="close()"></span>
+    </div>
+    <div class="content" >
+      <table class="table table-striped mobile-optimised">
+        <thead>
+          <tr>
+            <th class="cursor-pointer">
+              <div>
+                <span class="text-light">Descrição</span>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <div>
+                <input type="text" autocomplete="off" [(ngModel)]="searchValue">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-hover">
+            <td data-th="descrição:&nbsp;" class="td-hover d-flex align-items-center justify-content-start" (click)="selectItem()"><i [ngClass]="[control.value == null ? 'icon-color-success':'icon-color-ghost']"  class="fa-solid fas fa-check mr-3"></i></td>
+          </tr>
+          <tr class="tr-hover" *ngFor="let msg of options | Filter: searchValue">
+            <td data-th="descrição:&nbsp;" class="td-hover d-flex align-items-center justify-content-start" (click)="selectItem(msg)"><i [ngClass]="[control.value == msg.Id ? 'icon-color-success':'icon-color-ghost']" class="fa-solid fas fa-check mr-3"></i>{{msg.Descricao}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

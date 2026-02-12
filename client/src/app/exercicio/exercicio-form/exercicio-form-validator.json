@@ -1,0 +1,24 @@
+{
+  "Errors": [
+    {
+      "InputName": "Id",
+      "TypeError": "required",
+      "Message": "O Campo Id é obrigatório."
+    },
+    {
+      "InputName": "Ano",
+      "TypeError": "required",
+      "Message": "O Campo Ano é obrigatório."
+    },
+    {
+      "InputName": "Ano",
+      "TypeError": "mask",
+      "Message": "O Campo Ano deve seguir o formato \"AAAA\"."
+    },
+    {
+      "InputName": null,
+      "TypeError": "uniqueKey",
+      "Message": "Violação de chave única! (Registro duplicado)"
+    }
+  ]
+}

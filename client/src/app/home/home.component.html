@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <div class="d-flex justify-content-star wp-100">
+      <Label for="tab-centroCusto" class="tab text-danger" (click)="onNavigate('home/CentroCusto')" >
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <span>Centro Custo</span>
+        <input type="radio" name="tab-item" id="tab-centroCusto" class="input-tab-item" checked>
+      </Label>
+      <Label for="tab-centroLucro" class="tab text-success" (click)="onNavigate('home/CentroLucro')">
+        <i class="fa-solid fa-sack-dollar"></i>
+        <span>Centro Lucro</span>
+        <input type="radio" name="tab-item" id="tab-centroLucro" class="input-tab-item">
+      </Label>
+    </div>
+  </div>
+  <div class="card-main" (scroll)="onScroll($event)">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="card-footer"></div>
+</div>
+
+

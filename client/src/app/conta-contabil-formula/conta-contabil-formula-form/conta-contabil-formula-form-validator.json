@@ -1,0 +1,19 @@
+{
+  "Errors": [
+    {
+      "InputName": "Id",
+      "TypeError": "required",
+      "Message": "O Campo Id é obrigatório."
+    },
+    {
+      "InputName": "Formula",
+      "TypeError": "required",
+      "Message": "O Campo Formula é obrigatório."
+    },
+    {
+      "InputName": "Descricao",
+      "TypeError": "required",
+      "Message": "O Campo Descrição é obrigatório."
+    }
+  ]
+}

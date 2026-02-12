@@ -1,0 +1,120 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/common";
+@import "../../../../assets/styles/width";
+@import "../../../../assets/styles/spacing";
+
+:host {
+  display: flex;
+  position: relative;
+  padding-top: 12px;
+  & label {
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: $gray-500;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+  }
+  & input {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid $gray-500;
+    outline: 0;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    &:focus, &:not(:placeholder-shown) {
+      border-bottom: 2px solid $gray-500;
+    }
+    &:focus ~ label,  &:disabled ~ label , &:not(:placeholder-shown) ~ label {
+      transform: translateY(-24px);
+      font-size: 10px;
+    }
+    &:disabled, &:disabled ~ label{
+      background-color: transparent !important;
+      color: $gray-500 !important;
+    }
+  }
+  &.input-danger {
+    & input{
+      border-bottom: 2px solid $red-200 !important;
+      
+      &:focus, &:not(:placeholder-shown) {
+        border-bottom: 2px solid $red-200 !important;
+      }
+      &:disabled:not(:placeholder-shown) {
+        border-bottom: 2px solid $gray-500 !important;
+      }
+      & ~ label {
+        color: $red-200 !important;
+      }
+      &:focus ~ label, &:not(:placeholder-shown) ~ label {
+        color: $red-200 !important;
+      }
+      &:disabled:not(:placeholder-shown) ~ label {
+        color: $gray-500 !important;
+      }
+    }
+  }
+  
+  &.input-danger {
+    & input {
+      border-bottom: 2px solid $red-200 !important;
+      
+      &:focus, &:not(:placeholder-shown) {
+        border-bottom: 2px solid $red-200 !important;
+      }
+      &:disabled:not(:placeholder-shown) {
+        border-bottom: 2px solid $gray-500 !important;
+      }
+      & ~ label {
+        color: $red-200 !important;
+      }
+      &:focus ~ label, &:not(:placeholder-shown) ~ label {
+        color: $red-200 !important;
+      }
+      &:disabled:not(:placeholder-shown) ~ label {
+        color: $gray-500 !important;
+      }
+    }
+  }
+
+  &.input-primary {
+    & input{
+      &:focus, &:not(:placeholder-shown) {
+        border-bottom: 2px solid $blue-200;
+      }
+      &:disabled:not(:placeholder-shown) {
+        border-bottom: 2px solid $gray-500;
+      }
+      &:focus ~ label, &:not(:placeholder-shown) ~ label {
+        color: $blue-200;
+      }
+      &:disabled:not(:placeholder-shown) ~ label {
+        color: $gray-500;
+      }
+    }
+  }
+
+  &.input-success {
+    & .input{
+      &:focus, &:not(:placeholder-shown) {
+        border-bottom: 2px solid $green-200;
+      }
+      &:disabled:not(:placeholder-shown) {
+        border-bottom: 2px solid $gray-500;
+      }
+      &:focus ~ label, &:not(:placeholder-shown) ~ label {
+        color: $green-200;
+      }
+      &:disabled:not(:placeholder-shown) ~ label {
+        color: $gray-500;
+      }
+    }
+  }
+}
+

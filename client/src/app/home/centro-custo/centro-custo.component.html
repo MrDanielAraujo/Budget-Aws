@@ -1,0 +1,96 @@
+<form [formGroup]="crud.form.formGroup" (ngSubmit)="crud.onPagination($event, 1)">
+  <table class="table table-striped mobile-optimised">
+    <thead>
+      <tr>
+        <th class="danger mw-15 xw-15 w-15 cursor-pointer" (click)="situacao.click()">
+          <div>
+            <span>Situação</span>
+            <i class="fa-solid fa-arrow-down-up-across-line" data-icon="situacao" (click)="crud.onSetSortField('situacao', $event)" #situacao></i>
+          </div>
+        </th>
+        <th class="danger mw-20 xw-20 w-20 cursor-pointer" (click)="codigo.click()">
+          <div>
+            <span>Código</span>
+            <i class="fa-solid fa-arrow-down-up-across-line" data-icon="codigo" (click)="crud.onSetSortField('codigo', $event)" #codigo></i>
+          </div>
+        </th>
+        <th class="danger mw-30 xw-30 w-30 cursor-pointer" (click)="nome.click()">
+          <div>
+            <span>Nome</span>
+            <i class="fa-solid fa-arrow-down-up-across-line" data-icon="nome" (click)="crud.onSetSortField('nome', $event)" #nome></i>
+          </div>
+        </th>
+        <th class="danger mw-40 xw-40 w-40 cursor-pointer" (click)="usuario.click()">
+          <div>
+            <span>Usuário</span>
+            <i class="fa-solid fa-arrow-down-up-across-line" data-icon="usuario" (click)="crud.onSetSortField('usuario', $event)" #usuario></i>
+          </div>
+        </th>
+        <th class="danger mw-17 xw-17 w-17 cursor-pointer" (click)="nivelAtual.click()">
+          <div>
+            <span>Nível Atual Validação</span>
+            <i class="fa-solid fa-arrow-down-up-across-line" data-icon="nivelAtual" (click)="crud.onSetSortField('nivelAtual', $event)" #nivelAtual></i>
+          </div>
+        </th>
+        <th class="danger mw-17 xw-17 w-17 cursor-pointer" (click)="nivelTotal.click()">
+          <div>
+            <span>Nível Total Validação</span>
+            <i class="fa-solid fa-arrow-down-up-across-line" data-icon="nivelTotal" (click)="crud.onSetSortField('nivelTotal', $event)" #nivelTotal></i>
+          </div>
+        </th>
+        <th class="danger"><div></div></th>
+      </tr>
+      <tr>
+        <th>
+          <div>
+            <input type="text" formControlName="Situacao" autocomplete="off">
+            <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+          </div>
+        </th>
+        <th>
+          <div>
+            <input type="text" formControlName="CentroCodigo" autocomplete="off">
+            <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+          </div>
+        </th>
+        <th>
+          <div>
+            <input type="text" formControlName="CentroNome" autocomplete="off">
+            <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+          </div>
+        </th>
+        <th>
+          <div>
+            <input type="text" formControlName="Usuario" autocomplete="off">
+            <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+          </div>
+        </th>
+        <th>
+          <div>
+            <input type="text" formControlName="NivelAtual" autocomplete="off">
+            <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+          </div>
+        </th>
+        <th>
+          <div>
+            <input type="text" formControlName="NivelTotal" autocomplete="off">
+            <i class="fa-solid fa-filter" (click)="crud.onPagination($event, 1)"></i>
+          </div>
+        </th>
+        <th><div></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-hover" *ngFor="let model of dataList">
+        <td data-th="Status:&nbsp;" class="justify-content-center"><div class="badge {{model.SituacaoBgColor}} ">{{model.Situacao}}</div></td>
+        <td data-th="Centro de Custo Codigo:&nbsp;" class="td-hover" (click)="crud.onSelectItem($event, [model.IdCentro,model.IdExercicio],'lancamentoCentroCusto')" #selectItem>{{model.CentroCodigo}}</td>
+        <td data-th="Centro de Custo Nome:&nbsp;" class="td-hover" (click)="selectItem.click()">{{model.CentroNome}}</td>
+        <td data-th="Usuario:&nbsp;" class="td-hover" (click)="selectItem.click()">{{model.Usuario}}</td>
+        <td data-th="Nivel:&nbsp;" class="justify-content-center"><div class="badge badge-secondary">{{model.NivelAtual}}</div></td>
+        <td data-th="Nivel Total:&nbsp;" class="justify-content-center"><div class="badge badge-secondary">{{model.NivelTotal}}</div></td>
+        <td data-th="" class=""></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit" class="d-none">Submit</button>
+</form>

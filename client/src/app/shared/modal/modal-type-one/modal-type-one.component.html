@@ -1,0 +1,36 @@
+<dir class="block-sistem-access" *ngIf="modelTypeOneService.content.length >= 1" ></dir>
+<div class="alert alert-primary" *ngIf="modelTypeOneService.content.length >= 1" (click)="modelTypeOneService.onClose()">
+  <div (click)="modelTypeOneService.onStopPropagation($event)">
+    <div class="d-flex justify-content-between align-items-center">
+      <label><i class="fa-solid fas fa-list mr-2"></i>Lista de {{modelTypeOneService.title}}</label>
+      <span class="fa-solid fa-xmark" (click)="modelTypeOneService.onClose()"></span>
+    </div>
+    <form>
+      <table class="table table-striped mobile-optimised">
+        <thead>
+          <tr>
+            <th class=" mw-10 xw-10 w-10 cursor-pointer">
+              <div>
+                <span>Descrição</span>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <div>
+                <input type="text" [(ngModel)]="filtro" name="filtro"  autocomplete="off">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-hover" *ngFor="let model of modelTypeOneService.onGetInformacoes(filtro)">
+            <td data-th="Descrição:&nbsp;" class="justify-content-start  mobile-justify-content-start">{{model}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" class="d-none">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<nav>
+  <div class="flex align-items-center max-height-p">
+    <button class="btn-menu" (click)="menuPrincipalService.onMenuLateralShow($event)">
+      <span class="fas fa-bars"></span>
+    </button>
+    <div class="img-logo"></div>
+    <div class="system-name">Budget</div>
+  </div>
+  <div class="flex align-items-center max-height-p">
+    <button class="btn-gear">
+      <span class="fas fa-gear"></span>
+    </button>
+    <img *ngIf="userService.currentUserPic()" [src]="userService.currentUserPic()" class="current-user-pic" (click)="headerService.onUserInfoShow($event)"/>
+    <div *ngIf="!userService.currentUserPic()" class="current-user-letters" (click)="headerService.onUserInfoShow($event)">
+      {{ userService.currentUser()?.givenName?.charAt(0)?.toUpperCase() }}
+      {{ userService.currentUser()?.surname?.charAt(0)?.toUpperCase() }}
+    </div>
+  </div>
+</nav>
+<div id="userInfo" class="card-user-info" (click)="onStopPropagation($event)"><app-user-info></app-user-info></div>
+  

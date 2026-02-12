@@ -1,0 +1,34 @@
+<li *ngFor="let menu of menus">
+  
+  <div class="menu-lateral-sub-menu" *ngIf="menu.menu">
+    <label for="{{menu.modulo}}" class="menu-lateral-btn" (click)="menuPrincipalService.onMenuLateralSubItem($event)" [ngClass]="{ '{{ menu.nomeColor }}': menuPrincipalService.module == 'Combos' }">
+      <div class="menu-lateral-before-icone"></div>
+      <div class="menu-lateral-icone">
+        <i class="{{ menu.icone }} {{ menu.iconeColor }}"></i>
+      </div>
+      <div class="menu-lateral-titulo">
+        <span class="{{ menu.nomeColor }}">{{ menu.nome }}</span>
+      </div>
+      <div class="menu-lateral-indicador">
+        <i class="{{ menu.seta }} {{ menu.setaColor }}"></i>
+      </div>
+    </label>
+    <input type="checkbox" [id]="menu.modulo" class="display-none">
+    <ul>
+      <app-menu-principal [menus]="menu.menu" *ngIf="menu.menu"></app-menu-principal>
+    </ul>
+  </div>
+
+  <button type="button" class="menu-lateral-btn" (click)="menuPrincipalService.navigate(menu.route, menu.modulo)" [ngClass]="{ 'text-primary': menuPrincipalService.module == menu.modulo }" *ngIf="!menu.menu">
+    <div class="menu-lateral-before-icone"></div>
+    <div class="menu-lateral-icone">
+      <i class="{{ menu.icone }} {{ menu.iconeColor }}"></i>
+    </div>
+    <div class="menu-lateral-titulo">
+      <span class="{{ menu.nomeColor }}">{{ menu.nome }}</span>
+    </div>
+    <div class="menu-lateral-indicador">
+      <i class="{{ menu.seta }} {{ menu.setaColor }}"></i>
+    </div>
+  </button>
+</li>

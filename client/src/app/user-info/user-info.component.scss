@@ -1,0 +1,92 @@
+@import "../../../src/assets/styles/colors";
+@import "../../../src/assets/styles/fonts";
+
+.currentUserLetters {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  color: $white;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -5px;
+  background-color: $blue-200;
+}
+
+.currentUserPic {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header {
+  padding: 10px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  color: $gray-600;
+  & button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $gray-600;
+    border-radius: 5px;
+    padding: 5px;
+    &:hover {
+      background-color: $blue-200;
+      color: white;
+    }
+  }
+}
+
+.card-main {
+  padding: 10px;
+  & > div {
+    padding: 5px;
+    & > p {
+      margin: 0;
+      padding: 0;
+      font-family: 'inter', 'Times New Roman', Times, serif;
+      font-size: 12px;
+      color: $gray-600;
+      
+      &:first-child {
+        font-size: 16px;
+        color: $blue-200;
+      }
+    }
+  }
+}
+
+.card-footer {
+  background-color: $gray-200;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray-300;
+  }
+  & div {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 1px $gray-500;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: $gray-500;
+  }
+  & > span {
+    margin-left: 10px;
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    font-size: 12px;
+    color: $gray-500;
+  }
+}
